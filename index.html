@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+
+<html>
+
+
+
+
+<head>
+
+
+	<title>State of the Map Asia 2019</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="script/jquery-3.3.0.min.js"></script>
+	<link rel="stylesheet" href="style/bootstrap.min.css">
+	<script src="script/bootstrap.min.js"></script>
+
+
+	<style>
+		
+		html, body {
+			margin: 0px;
+			padding: 0px;
+		}
+		a {
+			text-decoration: none;
+			color: gray;
+		}
+		a:hover {
+			text-decoration: none;
+			color: cadetblue;
+		}
+		p {
+			text-align: justify;
+		}
+
+		div#pageContainer {
+			/*background-color: beige;*/
+		}
+		div.image-fit {
+			height: 100%;
+			background-size: cover;
+		}
+
+		.row:not(#header) {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		div.info {
+			padding: 30px;
+		}
+		img.icon {
+			height: 30px;
+			width: 30px;
+		}
+
+		#header img.logo {
+			height: 70px;
+			width: 70px;
+		}
+		#header .navbar-button {
+			margin: 10px 10px 10px -10px;		/* negative left margin to align options below header logo */
+		}
+		#header .navbar-button a {
+			padding: 20px;
+		}
+		#logo span {
+			padding: 0px 0px 0px 10px;
+		}
+
+		#firstScreen div.col-sm-4 {
+			text-align: center;
+		}
+		#firstScreen .affiliation img.logo {
+			margin: 15px 30px;
+			float: left;
+			height: 60px;
+		}
+
+		#firstScreen .date {
+			font-size: 24px;
+			color: teal;
+		}
+
+		#boxes .box {
+			outline: 1px solid lightgreen;
+			margin: 10px;
+			padding: 20px;
+			/*min-height: ;*/
+		}
+
+		#boxes .box p {
+			/*text-align: justify;*/
+		}
+
+		#lastYear div.image-fit {
+			background-image: url("image/last-year.png");
+		}
+
+		#sponsor img.logo {
+			margin: 20px;
+			height: 100px;
+			float: left;
+		}
+
+		#venue div.image-fit {
+			background-image: url("image/venue.png");
+		}
+
+		#footer {
+			padding: 15px 0px;
+		}
+		#footer img.icon {
+			margin: 0px 5px;
+			float: right;
+		}
+		#footer div.social-media-icons {
+			float: right;
+		}
+
+	</style>
+
+
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+
+	<div id="pageContainer" class="container">
+
+
+		<div id="header" class="row">
+			<div class="container">
+	            <nav class="navbar navbar-expand-lg navbar-light">
+	                <a id="logo" href="">
+	                	<img class="logo" src="image/logo.png">
+	                    <span>State of the Map Asia 2019</span>
+	                </a>
+	                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseToggle" aria-controls="navbarCollapseToggle" aria-expanded="false" aria-label="Toggle navigation">
+	                    <span class="navbar-toggler-icon"></span>
+	                </button>
+
+	                <div id="navbarCollapseToggle" class="collapse navbar-collapse">
+	                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+	                        <li class="navbar-button">
+	                            <a href="#">Program</a>
+	                        </li>
+	                        <li class="navbar-button">
+	                            <a href="#">Venue</a>
+	                        </li>
+	                        <li class="navbar-button">
+	                            <a href="#" target="_blank">Blog</a>
+	                        </li>
+	                        <li class="navbar-button">
+	                            <a href="#" data-toggle="modal" data-target="#exampleModalLong">Code of Conduct</a>
+	                        </li>
+	                    </ul>
+	                    <button type="button" class="btn btn-light">Follow us</button>
+	                </div>
+	            </nav>
+			</div>
+		</div>
+
+
+		<div id="firstScreen" class="row">
+			<div class="col-sm-4">
+				<img class="img-fluid" src="image/logo.png">
+				<h3>State of the Map Asia 2019</h3>
+			</div>
+			<div class="col-sm-8">
+				<div>
+					<span class="date">Tentative: October 24 &ndash; October 27, 2019</span>
+					<p>State of the Map Asia will bring together participants from around the world to discuss challenges, learn, and celebrate many years of mapping together.</p>
+					<p><button type="button" class="btn btn-success">Register</button></p>
+					<div class="affiliation">
+						<h4>Organized by</h4>
+						<div>
+							<img class="logo" src="image/logo/osmbdf.png">
+							<img class="logo" src="image/logo/boil.png">
+							<img class="logo" src="image/placeholder-square.png">
+							<img class="logo" src="image/placeholder-rectangle.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+
+		<div id="boxes" class="row">
+			<div class="col-sm-4">
+				<div class="box">
+					<h3>Call for proposal</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p><button type="button" class="btn btn-success">Submit proposal</button></p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="box">
+					<h3>Apply for Scholarship</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<button type="button" class="btn btn-success">Apply now</button>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="box">
+					<h3>Latest news</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<button type="button" class="btn btn-info">Read more</button>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="row">
+			<div id="lastYear" class="col-sm-6">
+				<div class="image-fit"></div>
+			</div>
+			<div class="col-sm-6 info">
+				<h3>State of the Map Asia 2018</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+
+
+
+		<div id="sponsor" class="row">
+			<div class="container">
+				<h3>Become our sponsor!</h3>
+				<p>As a partner, you will help us shape the conference this year. Download the sponsorship deck and email us stateofthemapasia@gmail.com for more information.</p>
+				<button type="button" class="btn btn-success">Sponsorship deck</button>
+			</div>
+			<div class="container">
+				<img class="logo" src="image/logo/osmbdf.png">
+				<img class="logo" src="image/logo/boil.png">
+				<img class="logo" src="image/placeholder-square.png">
+				<img class="logo" src="image/placeholder-rectangle.png">
+			</div>
+		</div>
+
+
+
+		<div id="venue" class="row">
+			<div class="col-sm-6">
+				<div class="image-fit"></div>
+			</div>
+			<div class="col-sm-6 info">
+				<h3>Placeholder Venue, Dhaka, Bangladesh</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+
+
+		<div id="footer" class="container">
+			<span>2019 &copy; All rights reserved</span>
+			<div class="social-media-icons">
+				<a href="#">
+					<img class="icon" title="Find us on Facebook" src="image/icon/facebook.png">
+				</a>
+				<a href="#">
+					<img class="icon" title="Find us on Twitter" src="image/icon/twitter.png">
+				</a>
+				<a href="#">
+					<img class="icon" title="Find us on Facebook" src="image/icon/facebook.png">
+				</a>
+				<a href="#">
+					<img class="icon" title="Find us on Twitter" src="image/icon/twitter.png">
+				</a>
+			</div>
+		</div>
+
+	</div>
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>
