@@ -47,6 +47,14 @@ img.icon {
 #logo span {
 	padding: 0px 0px 0px 10px;
 }
+#header #followOnTwitter.btn:before {
+	padding: 0px 30px 0px 0px;
+	height: 20px;
+	width: 20px;
+	content: url("/image/icon/twitter.png");
+	display: inline-flex;
+	vertical-align: middle;
+}
 
 #firstScreen div.col-sm-4 {
 	text-align: center;
