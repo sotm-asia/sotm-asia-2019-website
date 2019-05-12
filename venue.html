@@ -9,7 +9,7 @@
 <head>
 
 
-    <title>Code of Conduct | State of the Map Asia 2019</title>
+    <title>Venue | State of the Map Asia 2019</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="style/bootstrap.min.css">
     <script src="script/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style/index.css">
+    
+    <link rel="stylesheet" href="style.leaflet.css">
 
 
 </head>
@@ -70,26 +72,27 @@
 
 
 
-        <div id="codeOfConduct" class="row">
-            <div class="col-sm-3">
-                <center>
-                    <h3>Code</h3>
-                    <h3>of</h3>
-                    <h3>Conduct</h3>
-                </center>
+        <div id="venueDescription" class="row">
+            <div class="col-sm-6">
+                <h3>National Institute of Local Government (NIGL)</h3>
+                <p>National Institute of Local Government (জাতীয় স্থানীয় সরকার ইনস্টিটিউট) is a government training and research institute that is responsible for training officials, both elected and appointed, of local government in Bangladesh and is located in Agargaon, Dhaka, Bangladesh. It is under the Local Government Division of the Ministry of Local Government, Rural Development and Co-operatives.</p>
+                <p>In 1965 the government of Pakistan decided to establish a local government training institute in East Pakistan. A United States Agency for International Development consultant was appointed in 1967 to do a feasibility study. On 1 July 1969 the government of Pakistan established the Local government institute. The Government of Bangladesh reformed the local government institute into the National Institute of Local Government in 1980. It is governed by a board of directors formed under National Institute of Local Government Law, 1992.</p>
             </div>
-            <div class="col-sm-9">
-                <ul>
-                    <li>The State of the Map Asia 2017 team is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age, or religion. We do not tolerate harassment of conference participants in any form.</li>
-                    <li>Sexual language and imagery is not appropriate for any conference venue, including talks.</li>
-                    <li>Harassment includes verbal comments that reinforce social structures of domination related to gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age, religion; sexual images in public spaces; deliberate intimidation; stalking; following; harassing photography or recording; sustained disruption of talks or other events; inappropriate physical contact; and unwelcome sexual attention. Participants asked to stop any harassing behavior are expected to comply immediately.</li>
-                    <li>Exhibitors or similar actors are also subject to the anti-harassment policy. In particular, exhibitors should not use sexualized images, activities, or other material. Booth staff (including volunteers) should not use sexualized clothing, or otherwise create a sexualized environment.</li>
-                    <li>If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund. If you are being harassed, notice that someone else is being harassed, or have any other concerns that you are unable to satisfactorily resolve amongst the person(s) involved, please contact a member of conference team immediately. Escalation to, and incident reporting by a small subset of conference team leaders will ensure that repeat offenders do not go unnoticed.</li>
-                    <li>The conference team will be happy to help participants contact venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.</li>
-                    <li>We expect participants to follow these rules at all conference venues and conference-related social events.</li>
-                </ul>
+            <div class="col-sm-6 venue-image"></div>
+            <div class="col-sm-6">
+                <h3>Bangladesh Bureau of Statistics (BBS)</h3>
+                <p>The Bangladesh Bureau of Statistics (BBS) is the centralized official bureau in Bangladesh for collecting statistics on demographics, the economy, and other facts about the country and disseminating the information.</p>
+                <p>Although independent statistical programs had existed in the country before, they were often incomplete or produced inaccurate results, which led the Government of Bangladesh establishing an official bureau in August 1974, by merging four of the previous larger statistical agencies, the Bureau of Statistics, the Bureau of Agriculture Statistics, the Agriculture Census Commission and the Population Census Commission. In July 1975, the Statistics Division was created and placed under the Ministry of Planning in order to control it administratively In 2002, the Statistics Division merged with Planning Commission and the bureau is now controlled by the Ministry of Planning and office. It is headquarters in Dhaka, the Bangladesh Bureau of Statistics, as of 2008, has 23 regional statistical offices and 489 Upazila/Thana offices located in the 23 districts of Bangladesh.</p>
             </div>
+            <div class="col-sm-6 venue-image"></div>
         </div>
+
+
+
+        <div id="venueMapCont" class="row">
+            <div id="map" class="col-sm-12"></div>
+        </div>
+
 
 
         <div id="footer" class="container">
@@ -125,6 +128,28 @@
 
 
 </body>
+
+
+
+
+
+
+
+
+
+<script src="script/leaflet.js"></script>
+
+<script>
+    
+
+
+    let map = L.map("map").setView([55,0.9], 16);
+
+    L.tileLayer("https://a.tile.openstreetmap.org/${z}/${x}/${y}.png").addTo(map);
+
+
+
+</script>
 
 
 

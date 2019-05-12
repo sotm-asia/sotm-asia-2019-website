@@ -1,6 +1,8 @@
 :root {
 	--footer-text-color: #777;
 	--sponsor-header-color: #aaa;
+	--schedule-individual-venue-text-color: #aaa;
+	--schedule-individual-venue-font-size: 14px;
 }
 html, body {
 	margin: 0px;
@@ -44,11 +46,12 @@ div.row:not(#header) {
 a.button {
 	border-radius: 10px;
 	border: 1px solid var(--footer-text-color);
-	margin: 5px 10px;
-	padding: 5px 10px;
+	padding: 10px;
+	line-height: 3em;
 }
 a.button:hover {
 	border: 1px solid #ccc;
+	cursor: pointer;
 	color: #333;
 	background-color: #ccc;
 }
@@ -110,8 +113,18 @@ div#header.row {
 #footer div.previous {
 	text-align: center;
 }
-#footer div.social-media-icons {
-	/*float: right;*/
+#footer .previous a.button {
+	margin: 0px 10px;
+	padding: 5px 10px;
+	line-height: initial;
+}
+
+
+
+
+#programDescription h3, 
+#venueDescription h3 {
+	margin-bottom: 30px;
 }
 
 
@@ -184,9 +197,8 @@ div#firstScreen.row {
 	background-image: url("../image/last-year.jpg");
 }
 #lastYear a.button {
-	padding: 10px;
-	line-height: 2.5em;
- }
+	margin: 0px 10px;
+}
 #lastYear a.button.report:hover {
 	border: 1px solid lightgreen;
 	background-color: lightgreen;
@@ -242,9 +254,58 @@ div#firstScreen.row {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
+#programDescription a.button.register:hover {
+	border: 1px solid lightgreen;
+	background-color: lightgreen;
+}
+
+
+
+
+
 #schedule th:nth-child(1), 
 #schedule td:nth-child(1) {
 	text-align: center;
+}
+#schedule table td:nth-child(1) {
+	width: 10%;
+}
+#schedule table td:nth-child(2) {
+	width: 40%;
+}
+#schedule table td:nth-child(3) {
+	width: 50%;
+}
+#schedule table span.venue {
+	display: block;
+	font-size: var(--schedule-individual-venue-font-size);
+	color: var(--schedule-individual-venue-text-color);
+}
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*                                Venue page                                 */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+#venueDescription div.venue-image {
+	background-image: url("../image/venue-1.jpeg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#venueDescription div.venue-image:nth-child(4) {
+	background-image: url("../image/venue-2.jpeg");
+}
+#venueMapCont #map {
+	height: 600px;
+	background-color: lightgray;
 }
 
 
