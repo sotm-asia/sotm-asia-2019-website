@@ -1,3 +1,7 @@
+:root {
+	--footer-text-color: #777;
+	--sponsor-header-color: #aaa;
+}
 html, body {
 	margin: 0px;
 	padding: 0px;
@@ -14,17 +18,16 @@ p {
 	text-align: justify;
 }
 
-div#pageContainer {
-	/*background-color: beige;*/
-}
+
+
+
+
 div.image-fit {
 	height: 100%;
 	background-size: cover;
 }
-
-.row:not(#header) {
-	margin-top: 50px;
-	margin-bottom: 50px;
+button {
+	text-align: center;
 }
 div.info {
 	padding: 30px;
@@ -33,7 +36,31 @@ img.icon {
 	height: 30px;
 	width: 30px;
 }
+div.row:not(#header) {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	padding: 0px 16px;
+}
+a.button {
+	border-radius: 10px;
+	border: 1px solid var(--footer-text-color);
+	margin: 5px 10px;
+	padding: 5px 10px;
+}
+a.button:hover {
+	border: 1px solid #ccc;
+	color: #333;
+	background-color: #ccc;
+}
 
+
+
+
+
+div#header.row {
+	margin-top: 0px;
+	margin-bottom: 50px;
+}
 #header img.logo {
 	height: 70px;
 	width: 70px;
@@ -51,57 +78,199 @@ img.icon {
 	padding: 0px 30px 0px 0px;
 	height: 20px;
 	width: 20px;
-	content: url("/image/icon/twitter.png");
+	content: url("../image/icon/follow-twitter.png");
 	display: inline-flex;
 	vertical-align: middle;
 }
 
+
+
+
+
+#footer {
+	padding: 15px 16px;
+	color: var(--footer-text-color);
+}
+#footer div.row {
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+}
+#footer img.icon {
+	margin: -5px 0px 0px 5px;
+	padding: 5px;
+	height: 30px;
+	width: auto;
+	float: right;
+	filter: grayscale(1);
+}
+#footer img.icon:hover {
+	filter: grayscale(0);
+	transition: filter 1s ease;
+}
+#footer div.previous {
+	text-align: center;
+}
+#footer div.social-media-icons {
+	/*float: right;*/
+}
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*                                  Home page                                */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+/*#lastYear, 
+#sponsor, 
+#venue {
+	outline: 1px solid lightgreen;
+}*/
+
+
+
+
+div#firstScreen.row {
+	margin-top: 70px;
+}
 #firstScreen div.col-sm-4 {
 	text-align: center;
 }
+#firstScreen .affiliation {
+	margin: 40px 0px 0px 0px;
+}
 #firstScreen .affiliation img.logo {
-	margin: 15px 30px;
+	margin: 10px 20px;
 	float: left;
 	height: 60px;
 }
-
+#firstScreen .affiliation img.logo:hover {
+	filter: grayscale(1);
+	transition: filter 1s ease;
+}
 #firstScreen .date {
 	font-size: 24px;
 	color: teal;
 }
 
+
+
+
+
 #boxes .box {
 	outline: 1px solid lightgreen;
-	margin: 10px;
-	padding: 20px;
+	margin: 20px 5px;
+	padding: 30px;
 	/*min-height: ;*/
 }
-
-#boxes .box p {
-	/*text-align: justify;*/
+#boxes .box h3 {
+	margin: 00px 0px 20px 0px;
 }
+#boxes .box p {
+	/*font-size: 13px;*/
+}
+
+
+
+
 
 #lastYear div.image-fit {
-	background-image: url("/image/last-year.png");
+	background-image: url("../image/last-year.jpg");
+}
+#lastYear a.button {
+	padding: 10px;
+	line-height: 2.5em;
+ }
+#lastYear a.button.report:hover {
+	border: 1px solid lightgreen;
+	background-color: lightgreen;
+}
+#lastYear a.button.youtube:hover {
+	border: 1px solid pink;
+	background-color: pink;
 }
 
-#sponsor img.logo {
-	margin: 20px;
-	height: 100px;
-	float: left;
+
+
+
+
+#sponsor .col-sm-6 {
+	padding: 10px 40px;
 }
+#sponsor table {
+	display: block;
+}
+#sponsor table td.header {
+	border-bottom: 1px solid var(--sponsor-header-color);
+	color: var(--sponsor-header-color);
+}
+#sponsor table.left {
+	float: right;
+}
+#sponsor table.left td {
+	text-align: right;
+}
+#sponsor img.logo {
+	margin: 0px 20px;
+	height: 70px;
+}
+
+
+
+
 
 #venue div.image-fit {
-	background-image: url("/image/venue.png");
+	background-image: url("../image/venue.jpeg");
 }
 
-#footer {
-	padding: 15px 0px;
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*                                Program page                               */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+#schedule th:nth-child(1), 
+#schedule td:nth-child(1) {
+	text-align: center;
 }
-#footer img.icon {
-	margin: 0px 5px;
-	float: right;
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*                        Code of conduct page page                          */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+#codeOfConduct center {
+	margin: 50% 0px 0px 0px;
 }
-#footer div.social-media-icons {
-	float: right;
+#codeOfConduct center h3 {
+	line-height: 1.5em;
+}
+#codeOfConduct ul {
+	/*margin: 0px 40px 0px 20px;*/
+}
+#codeOfConduct li {
+	margin: 5px 0px 0px 0px;
+	list-style: circle;
+	text-align: justify;
 }
