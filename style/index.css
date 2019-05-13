@@ -3,10 +3,14 @@
 	--sponsor-header-color: #aaa;
 	--schedule-individual-venue-text-color: #aaa;
 	--schedule-individual-venue-font-size: 14px;
+	--venue-map-height: 400px;
 }
 html, body {
 	margin: 0px;
 	padding: 0px;
+}
+body {
+	text-align: justify;
 }
 a {
 	text-decoration: none;
@@ -122,9 +126,8 @@ div#header.row {
 
 
 
-#programDescription h3, 
-#venueDescription h3 {
-	margin-bottom: 30px;
+h3 {
+	margin: 0px 0px 30px 0px;
 }
 
 
@@ -151,6 +154,9 @@ div#header.row {
 
 div#firstScreen.row {
 	margin-top: 70px;
+}
+#firstScreen h3 {
+	margin: 0px;
 }
 #firstScreen div.col-sm-4 {
 	text-align: center;
@@ -183,7 +189,7 @@ div#firstScreen.row {
 	/*min-height: ;*/
 }
 #boxes .box h3 {
-	margin: 00px 0px 20px 0px;
+	margin: 0px 0px 20px 0px;
 }
 #boxes .box p {
 	/*font-size: 13px;*/
@@ -303,9 +309,46 @@ div#firstScreen.row {
 #venueDescription div.venue-image:nth-child(4) {
 	background-image: url("../image/venue-2.jpeg");
 }
-#venueMapCont #map {
-	height: 600px;
+#map, 
+#insetMapShadow {
+	height: var(--venue-map-height);
+}
+#map {
+	margin: 30px 0px 0px 0px;
 	background-color: lightgray;
+}
+#insetMapShadow {
+	position: relative;
+	margin: calc(0px - var(--venue-map-height)) 0px 0px 0px;
+	z-index: 999999;
+	pointer-events: none;
+	box-shadow: inset 0px 0px 10px 0px #333;
+}
+
+
+
+
+
+#accommodation div.accommodation-image {
+	margin: 0px 0px 30px 0px;
+	height: 300px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#accommodation .accommodation-image.image-1 {
+	background-image: url("../image/accommodation-1.jpeg");
+}
+#accommodation .accommodation-image.image-2 {
+	background-image: url("../image/accommodation-2.jpeg");
+}
+#accommodation .accommodation-details span.link {
+	display: inline-block;
+	float: right;
+}
+#accommodation .accommodation-details span.link::before {
+	padding: 3px;
+	content: "➢";
 }
 
 

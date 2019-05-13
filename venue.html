@@ -18,7 +18,7 @@
     <script src="script/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style/index.css">
     
-    <link rel="stylesheet" href="style.leaflet.css">
+    <link rel="stylesheet" href="style/leaflet.css">
 
 
 </head>
@@ -73,24 +73,57 @@
 
 
         <div id="venueDescription" class="row">
+            <div class="col-sm-12">
+                <h3>Venue</h3>
+            </div>
             <div class="col-sm-6">
-                <h3>National Institute of Local Government (NIGL)</h3>
+                <h5>National Institute of Local Government (NIGL)</h5>
                 <p>National Institute of Local Government (জাতীয় স্থানীয় সরকার ইনস্টিটিউট) is a government training and research institute that is responsible for training officials, both elected and appointed, of local government in Bangladesh and is located in Agargaon, Dhaka, Bangladesh. It is under the Local Government Division of the Ministry of Local Government, Rural Development and Co-operatives.</p>
                 <p>In 1965 the government of Pakistan decided to establish a local government training institute in East Pakistan. A United States Agency for International Development consultant was appointed in 1967 to do a feasibility study. On 1 July 1969 the government of Pakistan established the Local government institute. The Government of Bangladesh reformed the local government institute into the National Institute of Local Government in 1980. It is governed by a board of directors formed under National Institute of Local Government Law, 1992.</p>
             </div>
             <div class="col-sm-6 venue-image"></div>
+            <div class="col-sm-12"><br><br></div>
             <div class="col-sm-6">
-                <h3>Bangladesh Bureau of Statistics (BBS)</h3>
+                <h5>Bangladesh Bureau of Statistics (BBS)</h5>
                 <p>The Bangladesh Bureau of Statistics (BBS) is the centralized official bureau in Bangladesh for collecting statistics on demographics, the economy, and other facts about the country and disseminating the information.</p>
                 <p>Although independent statistical programs had existed in the country before, they were often incomplete or produced inaccurate results, which led the Government of Bangladesh establishing an official bureau in August 1974, by merging four of the previous larger statistical agencies, the Bureau of Statistics, the Bureau of Agriculture Statistics, the Agriculture Census Commission and the Population Census Commission. In July 1975, the Statistics Division was created and placed under the Ministry of Planning in order to control it administratively In 2002, the Statistics Division merged with Planning Commission and the bureau is now controlled by the Ministry of Planning and office. It is headquarters in Dhaka, the Bangladesh Bureau of Statistics, as of 2008, has 23 regional statistical offices and 489 Upazila/Thana offices located in the 23 districts of Bangladesh.</p>
             </div>
             <div class="col-sm-6 venue-image"></div>
+            <div id="map" class="col-sm-12"></div>
+            <div id="insetMapShadow" class="col-sm-12"></div>
         </div>
 
 
 
-        <div id="venueMapCont" class="row">
-            <div id="map" class="col-sm-12"></div>
+        <div id="accommodation" class="row">
+            <div class="col-sm-12">
+                <h3>Accommodation</h3>
+            </div>
+            <div class="col-sm-6">
+                <div class="accommodation-image image-1"></div>
+                <div class="accommodation-details">
+                    <h5>Pan Pacific Sonargaon<a href="https://www.panpacific.com/en/hotels-and-resorts/pp-dhaka.html" target="_blank" title="Go to site"><span class="link"></span></a>
+                    </h5>
+                    <div>A historic 5 star hotel in Dhaka, it is one of the oldest 5 star hotel in Bangladesh and is owned by the Government of Bangladesh and operated by Pan Pacific Hotels and Resorts.</div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="accommodation-image image-2"></div>
+                <div class="accommodation-details">
+                    <h5>InterContinental Dhaka<a href="https://www.ihg.com/intercontinental/hotels/us/en/dhaka/dachb/hoteldetail" target="_blank" title="Go to site"><span class="link"></span></a>
+                    </h5>
+                    <div>A prominent luxury hotel in Ramna in central Dhaka, the capital of Bangladesh, it was the first international five star hotel in the country and opened in 1966, as the Inter-Continental Dacca when the city, (then known as Dacca) was the capital of East Pakistan.</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="visa" class="row">
+            <div class="col-sm-12">
+                <h3>Visa information</h3>
+                <p>As a sovereign state, Bangladesh requires all foreigners to obtain permission to enter its territory. Visas are issued by Bangladesh missions located throughout the world or on arrival to Bangladesh. Extensions are available at the Department of Immigration and Passport of Bangladesh, and fees vary by country. Most foreigners require a Bangladesh visa to enter Bangladesh. citizens arriving from USA, Canada, Australia, New Zealand, Russian Federation, China, Japan, Singapore, Malaysia, South Korea, UAE, Saudi Arabia (KSA), Qatar, Kuwait, Oman, Bahrain and the countries of Europe may issue visa on arrival after examining and being satisfied by the immigration authority at the Airports and Land Ports.</p>
+            </div>
         </div>
 
 
@@ -143,9 +176,29 @@
     
 
 
-    let map = L.map("map").setView([55,0.9], 16);
+    let markerIcon = L.icon({
+        iconUrl: "image/icon/marker-icon.png",
+        shadowUrl: "image/icon/marker-shadow.png",
+        iconSize: [25, 41],
+        iconAnchor: [12.5, 41],
+        popupAnchor: [0, -41],
+    });
 
-    L.tileLayer("https://a.tile.openstreetmap.org/${z}/${x}/${y}.png").addTo(map);
+    let marker1 = L.marker([23.7803750, 90.3759660], {icon: markerIcon});
+    let marker2 = L.marker([23.77922, 90.37392], {icon: markerIcon});
+
+    let map = L.map("map");
+
+    marker1.addTo(map);
+    marker2.addTo(map);
+
+    map.fitBounds((L.featureGroup([marker1, marker2])).getBounds());
+    map.setZoom(16);
+    L.tileLayer("https://b.tile.openstreetmap.org/{z}/{x}/{y}.png ").addTo(map);
+
+    popup1 = marker1.bindPopup("<center>BBS</center>").openPopup().getPopup();
+    popup2 = marker2.bindPopup("<center>NIGL</center>").openPopup().getPopup();
+    map.addLayer(popup1, popup2);
 
 
 
