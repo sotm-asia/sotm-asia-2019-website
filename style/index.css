@@ -137,6 +137,33 @@ h3 {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+/*                                  404 page                                 */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+div#img404 {
+	height: calc(100vh - 200px);
+	opacity: 0.6;
+	background-image: url("../image/404.png");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+span#img404Cap {
+	text-align: center;
+	display: block;
+	opacity: 0.7;
+}
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
 /*                                  Home page                                */
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
