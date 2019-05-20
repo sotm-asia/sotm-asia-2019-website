@@ -333,10 +333,10 @@ div#firstScreen.row {
 	text-align: center;
 }
 #schedule table td:nth-child(1) {
-	width: 10%;
+	width: 15%;
 }
 #schedule table td:nth-child(2) {
-	width: 40%;
+	width: 35%;
 }
 #schedule table td:nth-child(3) {
 	width: 50%;
