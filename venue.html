@@ -40,7 +40,8 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a id="logo" href="index.html">
-                        <img class="logo" src="image/logo.png">
+                        <!-- <img class="logo" src="image/logo.png"> -->
+                        <div style="height: 50px; width: 50px; font-size: 10px; text-align: center; display: inline-block; vertical-align: middle; color: #fff; background-color: #666;"><span style="margin-top: 50%; padding: 0px; display: inline-block; transform: translateY(-50%);">logo<br>50x50</span></div>
                         <span>State of the Map Asia 2019</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseToggle" aria-controls="navbarCollapseToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +60,7 @@
                                 <a href="https://medium.com/state-of-the-map-asia" target="_blank">Blog</a>
                             </li>
                             <li class="navbar-button">
-                                <a href="code.html">Code of Conduct</a>
+                                <a href="code-of-conduct.html">Code of Conduct</a>
                             </li>
                         </ul>
                         <a href=" https://twitter.com/SotmAsia" target="_blank" title="Follow us on Twitter">
@@ -88,7 +89,7 @@
                 <p>The Bangladesh Bureau of Statistics (BBS) is the centralized official bureau in Bangladesh for collecting statistics on demographics, the economy, and other facts about the country and disseminating the information.</p>
                 <p>Although independent statistical programs had existed in the country before, they were often incomplete or produced inaccurate results, which led the Government of Bangladesh establishing an official bureau in August 1974, by merging four of the previous larger statistical agencies, the Bureau of Statistics, the Bureau of Agriculture Statistics, the Agriculture Census Commission and the Population Census Commission. In July 1975, the Statistics Division was created and placed under the Ministry of Planning in order to control it administratively In 2002, the Statistics Division merged with Planning Commission and the bureau is now controlled by the Ministry of Planning and office. It is headquarters in Dhaka, the Bangladesh Bureau of Statistics, as of 2008, has 23 regional statistical offices and 489 Upazila/Thana offices located in the 23 districts of Bangladesh.</p>
             </div>
-            <div class="col-sm-6 venue-image"></div>
+            <div id="venueImg2" class="col-sm-6 venue-image"></div>
             <div id="map" class="col-sm-12"></div>
             <div id="insetMapShadow" class="col-sm-12"></div>
         </div>
@@ -113,16 +114,18 @@
             <div class="col-sm-6">
                 <div class="accommodation-image image-1"></div>
                 <div class="accommodation-details">
-                    <h5>Pan Pacific Sonargaon<a href="https://www.panpacific.com/en/hotels-and-resorts/pp-dhaka.html" target="_blank" title="Go to site"><span class="link"></span></a>
-                    </h5>
+                    <a href="https://www.panpacific.com/en/hotels-and-resorts/pp-dhaka.html" target="_blank" title="Go to site">
+                        <h5>Pan Pacific Sonargaon</h5>
+                    </a>
                     <div>A historic 5 star hotel in Dhaka, it is one of the oldest 5 star hotel in Bangladesh and is owned by the Government of Bangladesh and operated by Pan Pacific Hotels and Resorts.</div>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="accommodation-image image-2"></div>
                 <div class="accommodation-details">
-                    <h5>InterContinental Dhaka<a href="https://www.ihg.com/intercontinental/hotels/us/en/dhaka/dachb/hoteldetail" target="_blank" title="Go to site"><span class="link"></span></a>
-                    </h5>
+                    <a href="https://www.ihg.com/intercontinental/hotels/us/en/dhaka/dachb/hoteldetail" target="_blank" title="Go to site">
+                        <h5>InterContinental Dhaka</h5>
+                    </a>
                     <div>A prominent luxury hotel in Ramna in central Dhaka, the capital of Bangladesh, it was the first international five star hotel in the country and opened in 1966, as the Inter-Continental Dacca when the city, (then known as Dacca) was the capital of East Pakistan.</div>
                 </div>
             </div>
@@ -205,7 +208,7 @@
 
     map.fitBounds((L.featureGroup([marker1, marker2])).getBounds());
     map.setZoom(16);
-    L.tileLayer("https://b.tile.openstreetmap.org/{z}/{x}/{y}.png ").addTo(map);
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png ").addTo(map);
 
     popup1 = marker1.bindPopup("<center>BBS</center>").openPopup().getPopup();
     popup2 = marker2.bindPopup("<center>NIGL</center>").openPopup().getPopup();
