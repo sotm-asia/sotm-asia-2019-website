@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+
+<html>
+
+
+
+
+<head>
+
+
+    <title>Venue | State of the Map Asia 2019</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script/jquery-3.3.0.min.js"></script>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <script src="script/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style/index.css">
+    
+    <link rel="stylesheet" href="style/leaflet.css">
+
+
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+
+    <div id="pageContainer" class="container">
+
+
+        <div id="header" class="row">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a id="logo" href="index.html">
+                        <!-- <img class="logo" src="image/logo.png"> -->
+                        <div style="height: 50px; width: 50px; font-size: 10px; text-align: center; display: inline-block; vertical-align: middle; color: #fff; background-color: #666;"><span style="margin-top: 50%; padding: 0px; display: inline-block; transform: translateY(-50%);">logo<br>50x50</span></div>
+                        <span>State of the Map Asia 2019</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseToggle" aria-controls="navbarCollapseToggle" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div id="navbarCollapseToggle" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                            <li class="navbar-button">
+                                <a href="program.html">Program</a>
+                            </li>
+                            <li class="navbar-button">
+                                <a href="venue.html">Venue</a>
+                            </li>
+                            <li class="navbar-button">
+                                <a href="https://medium.com/state-of-the-map-asia" target="_blank">Blog</a>
+                            </li>
+                            <li class="navbar-button">
+                                <a href="code-of-conduct.html">Code of Conduct</a>
+                            </li>
+                        </ul>
+                        <a href=" https://twitter.com/SotmAsia" target="_blank" title="Follow us on Twitter">
+                            <button id="followOnTwitter" type="button" class="btn btn-light">Follow us</button>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+
+
+        <div id="venueDescription" class="row">
+            <div class="col-sm-12">
+                <h3>Venue</h3>
+            </div>
+            <div class="col-sm-6">
+                <h5>National Institute of Local Government (NIGL)</h5>
+                <p>National Institute of Local Government (জাতীয় স্থানীয় সরকার ইনস্টিটিউট) is a government training and research institute that is responsible for training officials, both elected and appointed, of local government in Bangladesh and is located in Agargaon, Dhaka, Bangladesh. It is under the Local Government Division of the Ministry of Local Government, Rural Development and Co-operatives.</p>
+                <p>In 1965 the government of Pakistan decided to establish a local government training institute in East Pakistan. A United States Agency for International Development consultant was appointed in 1967 to do a feasibility study. On 1 July 1969 the government of Pakistan established the Local government institute. The Government of Bangladesh reformed the local government institute into the National Institute of Local Government in 1980. It is governed by a board of directors formed under National Institute of Local Government Law, 1992.</p>
+            </div>
+            <div class="col-sm-6 venue-image"></div>
+            <div class="col-sm-12"><br><br></div>
+            <div class="col-sm-6">
+                <h5>Bangladesh Bureau of Statistics (BBS)</h5>
+                <p>The Bangladesh Bureau of Statistics (BBS) is the centralized official bureau in Bangladesh for collecting statistics on demographics, the economy, and other facts about the country and disseminating the information.</p>
+                <p>Although independent statistical programs had existed in the country before, they were often incomplete or produced inaccurate results, which led the Government of Bangladesh establishing an official bureau in August 1974, by merging four of the previous larger statistical agencies, the Bureau of Statistics, the Bureau of Agriculture Statistics, the Agriculture Census Commission and the Population Census Commission. In July 1975, the Statistics Division was created and placed under the Ministry of Planning in order to control it administratively In 2002, the Statistics Division merged with Planning Commission and the bureau is now controlled by the Ministry of Planning and office. It is headquarters in Dhaka, the Bangladesh Bureau of Statistics, as of 2008, has 23 regional statistical offices and 489 Upazila/Thana offices located in the 23 districts of Bangladesh.</p>
+            </div>
+            <div id="venueImg2" class="col-sm-6 venue-image"></div>
+            <div id="map" class="col-sm-12"></div>
+            <div id="insetMapShadow" class="col-sm-12"></div>
+        </div>
+
+
+
+        <div id="getToDhaka" class="row">
+            <div class="col-sm-12">
+                <h3>How to get to Dhaka, Bangladesh</h3>
+                <h5>By plane</h5>
+                <p>Hazrat Shahjalal International Airport (DAC<sup><a href="https://en.wikivoyage.org/wiki/IATA" target="_blank" title="Airport codes – Travel guide at Wikivoyage">IATA</a></sup>) is the primary airport serving Dhaka. It has regular international flights from London, Istanbul, Dubai, Singapore, Hong Kong, Colombo, Kuala Lumpur, Bangkok, Karachi, Mumbai, New Delhi, Kolkata, Yangon and Kathmandu. There are also flights to Paro in Bhutan, Male in the Maldives and Kunming in the Yunnan province of China. The airport has significant traffic with the Middle East, including Muscat, Jeddah, Doha, Bahrain and Kuwait. The national airline Biman operates flights to 21 cities in Europe and Asia; while private Bangladeshi carriers operate regional flights within South and Southeast Asia. Hazrat Shahjalal is a relatively modern and efficient airport. However, immigration can take notoriously long during peak hours. If you are transferring from the international to domestic terminal, beware of airport officials at the scanning station (before the domestic terminal) who will tell you that the domestic terminal is closed, make you sit down, and then try to extort bribes from you. If that happens, get up, and quickly walk out of the doors and turn right towards the domestic terminal. Once inside, he may follow you, but loudly tell him to leave you alone. He will back down and go back to his station. Domestic flights link five cities within the country.</p>
+                <p class="reference">Courtesy: <a href="https://en.wikivoyage.org/wiki/Dhaka#Get_in" target="_blank" title="Dhaka – Travel guide at Wikivoyage">Wikivoyage</a></p>
+            </div>
+        </div>
+
+
+
+        <div id="accommodation" class="row">
+            <div class="col-sm-12">
+                <h3>Accommodation</h3>
+            </div>
+            <div class="col-sm-6">
+                <div class="accommodation-image image-1"></div>
+                <div class="accommodation-details">
+                    <a href="https://www.panpacific.com/en/hotels-and-resorts/pp-dhaka.html" target="_blank" title="Go to site">
+                        <h5>Pan Pacific Sonargaon</h5>
+                    </a>
+                    <div>A historic 5 star hotel in Dhaka, it is one of the oldest 5 star hotel in Bangladesh and is owned by the Government of Bangladesh and operated by Pan Pacific Hotels and Resorts.</div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="accommodation-image image-2"></div>
+                <div class="accommodation-details">
+                    <a href="https://www.ihg.com/intercontinental/hotels/us/en/dhaka/dachb/hoteldetail" target="_blank" title="Go to site">
+                        <h5>InterContinental Dhaka</h5>
+                    </a>
+                    <div>A prominent luxury hotel in Ramna in central Dhaka, the capital of Bangladesh, it was the first international five star hotel in the country and opened in 1966, as the Inter-Continental Dacca when the city, (then known as Dacca) was the capital of East Pakistan.</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="visa" class="row">
+            <div class="col-sm-12">
+                <h3>Visa information</h3>
+                <p>As a sovereign state, Bangladesh requires all foreigners to obtain permission to enter its territory. Visas are issued by Bangladesh missions located throughout the world or on arrival to Bangladesh. Extensions are available at the Department of Immigration and Passport of Bangladesh, and fees vary by country. Most foreigners require a Bangladesh visa to enter Bangladesh. citizens arriving from USA, Canada, Australia, New Zealand, Russian Federation, China, Japan, Singapore, Malaysia, South Korea, UAE, Saudi Arabia (KSA), Qatar, Kuwait, Oman, Bahrain and the countries of Europe may issue visa on arrival after examining and being satisfied by the immigration authority at the Airports and Land Ports.</p>
+            </div>
+        </div>
+
+
+
+        <div id="footer" class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <span>2019 &copy; All rights reserved</span>
+                </div>
+                <div class="col-sm-4 previous">
+                    <a class="button" href="http://stateofthemap.asia" target="_blank" title="SotM Asia 2018">2018</a>
+                    <a class="button" href="https://2017.stateofthemap.asia/index.html" target="_blank" title="SotM Asia 2017">2017</a>
+                    <a class="button" href="https://sotmasia2016.splashthat.com" target="_blank" title="SotM Asia 2016">2016</a>
+                </div>
+                <div class="col-sm-4">
+                    <div class="social-media-icons">
+                        <a href="https://www.instagram.com/sotm_asia">
+                            <img class="icon" title="Find us on Instagram" src="image/icon/instagram.png">
+                        </a>
+                        <a href="https://www.facebook.com/SotmAsia">
+                            <img class="icon" title="Find us on Facebook" src="image/icon/facebook.png">
+                        </a>
+                        <a href="https://t.me/OpenStreetMapAsia">
+                            <img class="icon" title="Find us on Telegram" src="image/icon/telegram.png">
+                        </a>
+                        <a href="https://twitter.com/SotmAsia">
+                            <img class="icon" title="Find us on Twitter" src="image/icon/twitter.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+<script src="script/leaflet.js"></script>
+
+<script>
+    
+
+
+    let markerIcon = L.icon({
+        iconUrl: "image/icon/marker-icon.png",
+        shadowUrl: "image/icon/marker-shadow.png",
+        iconSize: [25, 41],
+        iconAnchor: [12.5, 41],
+        popupAnchor: [0, -41],
+    });
+
+    let marker1 = L.marker([23.7803750, 90.3759660], {icon: markerIcon});
+    let marker2 = L.marker([23.77922, 90.37392], {icon: markerIcon});
+
+    let map = L.map("map");
+
+    marker1.addTo(map);
+    marker2.addTo(map);
+
+    map.fitBounds((L.featureGroup([marker1, marker2])).getBounds());
+    map.setZoom(16);
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png ").addTo(map);
+
+    popup1 = marker1.bindPopup("<center>BBS</center>").openPopup().getPopup();
+    popup2 = marker2.bindPopup("<center>NIGL</center>").openPopup().getPopup();
+    map.addLayer(popup1, popup2);
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</html>

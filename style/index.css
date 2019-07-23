@@ -1,0 +1,440 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*                             Bootstrap override                            */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+a.btn:not([href]):not([tabindex]) {
+	color: #fff;
+}
+a.btn:not([href]):not([tabindex]):hover {
+	color: #fff;
+}
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*                                  General                                  */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+:root {
+	--footer-text-color: #777;
+	--sponsor-header-color: #aaa;
+	--schedule-individual-venue-text-color: #aaa;
+	--schedule-individual-venue-font-size: 14px;
+	--venue-map-height: 400px;
+}
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	text-align: justify;
+}
+a {
+	text-decoration: none;
+	color: gray;
+}
+a:hover {
+	text-decoration: none;
+	color: cadetblue;
+}
+p {
+	text-align: justify;
+}
+
+
+
+
+
+div.image-fit {
+	height: 100%;
+	background-size: cover;
+}
+button {
+	text-align: center;
+}
+div.info {
+	padding: 30px;
+}
+img.icon {
+	height: 30px;
+	width: 30px;
+}
+div.row:not(#header) {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	padding: 0px 16px;
+}
+a.button {
+	border-radius: 10px;
+	border: 1px solid var(--footer-text-color);
+	padding: 10px;
+	line-height: 3em;
+}
+a.button:hover {
+	border: 1px solid #ccc;
+	cursor: pointer;
+	color: #333;
+	background-color: #ccc;
+}
+
+
+
+
+
+div#header.row {
+	margin-top: 0px;
+	margin-bottom: 50px;
+}
+#header img.logo {
+	height: 50px;
+	width: 50px;
+}
+#header .navbar-button {
+	margin: 10px 10px 10px -10px;		/* negative left margin to align options below header logo */
+}
+#header .navbar-button a {
+	padding: 20px;
+}
+#logo span {
+	padding: 0px 0px 0px 10px;
+}
+#header #followOnTwitter.btn:before {
+	padding: 0px 30px 0px 0px;
+	height: 20px;
+	width: 20px;
+	content: url("../image/icon/follow-twitter.png");
+	display: inline-flex;
+	vertical-align: middle;
+}
+
+
+
+
+
+#footer {
+	padding: 15px 16px;
+	color: var(--footer-text-color);
+}
+#footer div.row {
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+}
+#footer img.icon {
+	margin: -5px 0px 0px 5px;
+	padding: 5px;
+	height: 30px;
+	width: auto;
+	float: right;
+	filter: grayscale(1);
+}
+#footer img.icon:hover {
+	filter: grayscale(0);
+	transition: filter 1s ease;
+}
+#footer div.previous {
+	text-align: center;
+}
+#footer .previous a.button {
+	margin: 0px 10px;
+	padding: 5px 10px;
+	line-height: initial;
+}
+
+
+
+
+h3 {
+	margin: 0px 0px 30px 0px;
+}
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*                                  404 page                                 */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+div#img404 {
+	height: calc(100vh - 200px);
+	opacity: 0.6;
+	background-image: url("../image/404.png");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+span#img404Cap {
+	text-align: center;
+	display: block;
+	opacity: 0.7;
+}
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*                                  Home page                                */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+/*#lastYear, 
+#sponsor, 
+#venue {
+	outline: 1px solid lightgreen;
+}*/
+
+
+
+
+div#firstScreen.row {
+	margin-top: 70px;
+}
+#bigLogo img.logo {
+	padding: 20px;
+}
+#firstScreen h3 {
+	margin: 0px;
+}
+#firstScreen div.col-sm-4 {
+	text-align: center;
+}
+#firstScreen .affiliation {
+	margin: 40px 0px 0px 0px;
+}
+#firstScreen .affiliation img.logo {
+	margin: 10px 20px;
+	float: left;
+	height: 60px;
+}
+#firstScreen .affiliation img.logo:hover {
+	filter: grayscale(1);
+	transition: filter 1s ease;
+}
+#firstScreen .date {
+	font-size: 24px;
+	color: teal;
+}
+
+
+
+
+
+#boxes .box {
+	outline: 1px solid lightgreen;
+	margin: 20px 5px;
+	padding: 30px;
+	/*min-height: ;*/
+}
+#boxes .box h3 {
+	margin: 0px 0px 20px 0px;
+}
+#boxes .box p {
+	/*font-size: 13px;*/
+}
+
+
+
+
+
+#lastYear div.image-fit {
+	background-image: url("../image/last-year.jpg");
+}
+#lastYear a.button {
+	margin: 0px 10px;
+}
+#lastYear a.button.report:hover {
+	border: 1px solid lightgreen;
+	background-color: lightgreen;
+}
+#lastYear a.button.youtube:hover {
+	border: 1px solid pink;
+	background-color: pink;
+}
+
+
+
+
+
+#sponsor .col-sm-6 {
+	padding: 10px 40px;
+}
+#sponsor table {
+	display: block;
+}
+#sponsor table td.header {
+	border-bottom: 1px solid var(--sponsor-header-color);
+	color: var(--sponsor-header-color);
+}
+#sponsor table.left {
+	float: right;
+}
+#sponsor table.left td {
+	text-align: right;
+}
+#sponsor img.logo {
+	margin: 0px 20px;
+	height: 70px;
+}
+
+
+
+
+
+#venue div.image-fit {
+	background-image: url("../image/venue.jpeg");
+}
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*                                Program page                               */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+#programDescription a.button.register:hover {
+	border: 1px solid lightgreen;
+	background-color: lightgreen;
+}
+
+
+
+
+
+#schedule th:nth-child(1), 
+#schedule td:nth-child(1) {
+	text-align: center;
+}
+#schedule table td:nth-child(1) {
+	width: 15%;
+}
+#schedule table td:nth-child(2) {
+	width: 35%;
+}
+#schedule table td:nth-child(3) {
+	width: 50%;
+}
+#schedule table span.venue {
+	display: block;
+	font-size: var(--schedule-individual-venue-font-size);
+	color: var(--schedule-individual-venue-text-color);
+}
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*                                Venue page                                 */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+#venueDescription div.venue-image {
+	background-image: url("../image/venue-1.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+div#venueImg2.venue-image {
+	background-image: url("../image/venue-2.png");
+}
+#map, 
+#insetMapShadow {
+	height: var(--venue-map-height);
+}
+#map {
+	margin: 30px 0px 0px 0px;
+	background-color: lightgray;
+}
+#insetMapShadow {
+	position: relative;
+	margin: calc(0px - var(--venue-map-height)) 0px 0px 0px;
+	z-index: 999999;
+	pointer-events: none;
+	box-shadow: inset 0px 0px 10px 0px #333;
+}
+
+
+
+
+
+#getToDhaka p.reference {
+	font-style: italic;
+	text-align: right;
+}
+
+
+
+
+
+#accommodation div.accommodation-image {
+	margin: 0px 0px 30px 0px;
+	height: 300px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#accommodation .accommodation-image.image-1 {
+	background-image: url("../image/accommodation-1.jpeg");
+}
+#accommodation .accommodation-image.image-2 {
+	background-image: url("../image/accommodation-2.jpeg");
+}
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*                        Code of conduct page page                          */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+#codeOfConduct center {
+	margin: 50% 0px 0px 0px;
+}
+#codeOfConduct center h3 {
+	line-height: 1.5em;
+}
+#codeOfConduct ul {
+	/*margin: 0px 40px 0px 20px;*/
+}
+#codeOfConduct li {
+	margin: 5px 0px 0px 0px;
+	list-style: circle;
+	text-align: justify;
+}
