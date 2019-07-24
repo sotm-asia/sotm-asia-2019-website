@@ -56,6 +56,13 @@ p {
 
 
 
+h3 {
+	margin: 0px 0px 30px 0px;
+}
+
+
+
+
 
 div.image-fit {
 	height: 100%;
@@ -87,6 +94,14 @@ a.button:hover {
 	cursor: pointer;
 	color: #333;
 	background-color: #ccc;
+}
+
+div.cross {
+	display: inline-block;
+}
+
+.cross:hover {
+	cursor: pointer;
 }
 
 
@@ -150,13 +165,6 @@ div#header.row {
 	margin: 0px 10px;
 	padding: 5px 10px;
 	line-height: initial;
-}
-
-
-
-
-h3 {
-	margin: 0px 0px 30px 0px;
 }
 
 
@@ -235,6 +243,23 @@ div#firstScreen.row {
 #firstScreen .date {
 	font-size: 24px;
 	color: teal;
+}
+
+div#comingSoon {
+	border: 2px solid rgba(236, 224, 106, 1);
+	border-radius: 5px;
+	display: none;
+	margin: 20px 0;
+	padding: 10px;
+	text-align: center;
+}
+
+#comingSoon .cross::after {
+	content: "\02715";
+	margin: -35px 15px 0 0;
+	padding: 5px;
+	position: absolute;
+	right: 0;
 }
 
 

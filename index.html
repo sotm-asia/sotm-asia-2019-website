@@ -92,7 +92,8 @@
                 <div>
                     <span class="date">Tentative: November 1 &ndash; 2, 2019</span>
                     <p>State of the Map Asia will bring together participants from around the world to discuss challenges, learn, and celebrate many years of mapping together.</p>
-                    <a class="btn btn-success" href="https://docs.google.com/forms/d/e/1FAIpQLSerIriYdagmWdFPBZmxVOWCRivt0RCSWCH3gReTpWrLzmmTyA/viewform" target="_blank">Register</a>
+                    <a class="btn btn-success" href="#" onclick="event.preventDefault(); showComingSoon()">Register</a>
+                    <div id="comingSoon"></div>
                     <div class="affiliation">
                         <h5>Organized by:</h5>
                         <div>
@@ -257,6 +258,35 @@
 
 
 </body>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    
+
+    "use strict";
+
+
+
+    function showComingSoon() {
+        let box = document.getElementById("comingSoon");
+        box.innerText = "Coming soon!";
+        box.style.display = "block";
+        let cross = document.createElement("div");
+        cross.classList.add("cross");
+        cross.addEventListener("click", function(e) {
+            e.target.parentNode.style.display = "none";
+        });
+        box.appendChild(cross);
+    }
+
+
+</script>
 
 
 
