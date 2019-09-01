@@ -327,14 +327,6 @@ div#comingSoon {
 
 
 
-#venue div.image-fit {
-	background-image: url("../image/venue.jpeg");
-}
-
-
-
-
-
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -385,13 +377,9 @@ div#comingSoon {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-#venueDescription div.venue-image {
-	background-image: url("../image/venue-1.png");
-	background-repeat: no-repeat;
-	background-position: center;
-}
-div#venueImg2.venue-image {
-	background-image: url("../image/venue-2.png");
+#venueDescription .venue-image img {
+	margin-bottom: 20px;
+	width: 100%;
 }
 #map, 
 #insetMapShadow {
