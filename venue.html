@@ -192,21 +192,16 @@
         popupAnchor: [0, -41],
     });
 
-    let marker1 = L.marker([23.7803750, 90.3759660], {icon: markerIcon});
-    let marker2 = L.marker([23.77922, 90.37392], {icon: markerIcon});
+    let latLong = [23.7595168, 90.3854013];
 
     let map = L.map("map");
 
-    marker1.addTo(map);
-    marker2.addTo(map);
-
-    map.fitBounds((L.featureGroup([marker1, marker2])).getBounds());
-    map.setZoom(16);
+    map.setView(latLong, 15);
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png ").addTo(map);
 
-    popup1 = marker1.bindPopup("<center>BBS</center>").openPopup().getPopup();
-    popup2 = marker2.bindPopup("<center>NIGL</center>").openPopup().getPopup();
-    map.addLayer(popup1, popup2);
+    let marker = L.marker(latLong, {icon: markerIcon});
+    marker.addTo(map);
+    marker.bindPopup("Krishibid Institution Bangladesh (KIB)").openPopup();
 
 
 
