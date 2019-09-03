@@ -143,6 +143,9 @@ div#header.row {
 	margin: 0px 0px 0px 0px;
 	padding: 0px;
 }
+#footer div.row > div {
+	margin: 10px 0;
+}
 #footer img.icon {
 	margin: -5px 0px 0px 5px;
 	padding: 5px;
