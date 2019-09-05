@@ -213,6 +213,10 @@ span#img404Cap {
 	outline: 1px solid lightgreen;
 }*/
 
+#venue .image-fit {
+	background-image: url('../image/venue.png');
+}
+
 
 
 
