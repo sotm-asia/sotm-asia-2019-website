@@ -284,6 +284,9 @@ div#comingSoon {
 	padding: 30px;
 	/*min-height: ;*/
 }
+#boxes > div:nth-child(1) .box {
+	outline-color: rgba(140, 34, 34, 0.5);
+}
 #boxes .box h3 {
     margin: 0px 0px 20px 0px;
     font-size: 1.25rem;
