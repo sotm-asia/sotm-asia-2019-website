@@ -313,6 +313,20 @@ div#comingSoon {
 	border: 1px solid pink;
 	background-color: pink;
 }
+@media (min-width: 576px) {
+  #lastYear a.button {
+    display: block;
+    line-height: 1em;
+    margin: 15px 5px;
+  }
+}
+@media (min-width: 768px) {
+  #lastYear a.button {
+    display: block;
+    line-height: 1em;
+    margin: 15px;
+  }
+}
 
 
 
