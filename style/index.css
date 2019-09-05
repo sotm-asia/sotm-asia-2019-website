@@ -384,7 +384,23 @@ div#comingSoon {
 #venueDescription .venue-image img {
 	margin-bottom: 20px;
 	width: 100%;
-	max-height: 330px;
+}
+@media (min-width: 768px) {
+  #venueDescription .venue-image img {
+    max-height: 200px;
+  }
+}
+
+@media (min-width: 992px) {
+  #venueDescription .venue-image img {
+    max-height: 280px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #venueDescription .venue-image img {
+    max-height: 330px;
+  }
 }
 #map, 
 #insetMapShadow {
