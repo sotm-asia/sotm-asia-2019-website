@@ -285,10 +285,11 @@ div#comingSoon {
 	/*min-height: ;*/
 }
 #boxes .box h3 {
-	margin: 0px 0px 20px 0px;
+    margin: 0px 0px 20px 0px;
+    font-size: 1.25rem;
 }
 #boxes .box p {
-	/*font-size: 13px;*/
+    font-size: .9rem;
 }
 
 
