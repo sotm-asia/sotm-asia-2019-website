@@ -279,13 +279,13 @@ div#comingSoon {
 
 
 #boxes .box {
-	outline: 1px solid lightgreen;
+	outline: 1px solid rgba(140, 34, 34, 0.5);
 	margin: 20px 5px;
 	padding: 30px;
 	/*min-height: ;*/
 }
 #boxes > div:nth-child(1) .box {
-	outline-color: rgba(140, 34, 34, 0.5);
+	outline-color: lightgreen;
 }
 #boxes .box h3 {
     margin: 0px 0px 20px 0px;
