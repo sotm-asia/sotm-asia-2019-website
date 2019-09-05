@@ -270,6 +270,14 @@ div#comingSoon {
 
 
 
+#TweetUpdate {
+	border: 1px solid #1da1f2;
+}
+
+
+
+
+
 #boxes .box {
 	outline: 1px solid lightgreen;
 	margin: 20px 5px;
