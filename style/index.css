@@ -50,7 +50,7 @@ a {
 }
 a:hover {
 	text-decoration: none;
-	color: cadetblue;
+	color: var(--heading-left-border-color);
 }
 p {
 	text-align: justify;
@@ -60,27 +60,41 @@ p {
 
 
 h3 {
+	font-weight: 600;
 	margin: 0px 0px 30px 0px;
+}
+h5 {
+	font-size: 1.5rem;
+	font-weight: 600;
 }
 
 
 
 
-#lastYear h3, 
-#sponsor h3, 
+#lastYear h3,
+#sponsor h3,
 #venue h3,
+#venueDescription h3,
+#getToDhaka h3,
+#accommodation h3,
+#visa h3,
+#programDescription h3,
 #boxes .box {
 	background-color: var(--heading-color);
 	border-left-color: var(--heading-left-border-color);
 	border-left-style: solid;
 }
-#lastYear h3, 
-#sponsor h3, 
-#venue h3 {
+#lastYear h3,
+#sponsor h3,
+#venue h3,
+#venueDescription h3,
+#getToDhaka h3,
+#accommodation h3,
+#visa h3,
+#programDescription h3 {
 	border-left-width: 10px;
 	padding: 5px 10px;
 	padding-top: 10px;
-	font-weight: 600;
 }
 #boxes .box {
 	border-left-width: 20px;
@@ -167,6 +181,7 @@ div#header.row {
 	padding: 0px 0px 0px 10px;
 }
 #header #followOnTwitter.btn {
+	margin: 10px 0 10px -5px;
 	padding-top: 10px;
 }
 #header #followOnTwitter.btn:before {
@@ -209,7 +224,7 @@ div#header.row {
 	text-align: center;
 }
 #footer .previous a.btn {
-	margin: -7px 10px;
+	margin: 5px;
 	padding: 5px 10px;
 	padding-top: 10px;
 	line-height: initial;
@@ -255,12 +270,6 @@ span#img404Cap {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-/*#lastYear, 
-#sponsor, 
-#venue {
-	outline: 1px solid lightgreen;
-}*/
-
 #venue .image-fit {
 	background-image: url('../image/venue.png');
 }
@@ -270,6 +279,12 @@ span#img404Cap {
 
 div#firstScreen.row {
 	margin-top: 70px;
+}
+#firstScreen .img-cont {
+	text-align: center;
+}
+#firstScreen .mid > div {
+	padding: 0 40px;
 }
 #bigLogo img.logo {
 	background-color: #fff;
@@ -285,7 +300,7 @@ div#firstScreen.row {
 	margin-bottom: 20px;
 }
 #firstScreen h3 {
-	margin: 0px;
+	margin: 0 0 50px 0;
 	font-weight: 600;
 	text-align: center;
 	color: #f02b08;
@@ -344,13 +359,8 @@ div#comingSoon {
 
 
 #boxes .box {
-	outline: 1px solid rgba(140, 34, 34, 0.5);
 	margin: 20px 5px;
 	padding: 30px;
-	/*min-height: ;*/
-}
-#boxes > div:nth-child(1) .box {
-	outline-color: lightgreen;
 }
 #boxes .box h3 {
     margin: 0px 0px 20px 0px;
@@ -365,8 +375,15 @@ div#comingSoon {
 
 
 
+div.image-fit {
+	min-height: 400px;
+}
+
 #lastYear div.image-fit {
 	background-image: url("../image/last-year.jpg");
+}
+#lastYear a.report {
+	margin: 10px 0;
 }
 
 
@@ -422,11 +439,12 @@ div#schedule.row {
 #schedule {
 	display: block;
 	text-align: center;
+	min-width: 450px;
 }
 #schedule span {
 	border: 1px solid var(--heading-color);
-	font-size: 2rem;
-	padding: 50px 70px;
+	font-size: 1.5rem;
+	padding: 40px 50px;
 	border-radius: 30px;
 }
 
@@ -480,7 +498,8 @@ div#schedule.row {
 	box-shadow: inset 0px 0px 10px 0px #333;
 }
 #getDirectionToVenue {
-    margin: 5px 0 0 15px;
+    margin: 15px 0 0 20px;
+    font-weight: 600;
 }
 #getDirectionToVenue::after {
    content: '\27a4';
@@ -534,7 +553,7 @@ div#schedule.row {
 
 
 #codeOfConduct center {
-	margin: 50% 0px 0px 0px;
+	/*margin: 50px 0;*/
 }
 #codeOfConduct center h3 {
 	line-height: 1.5em;
