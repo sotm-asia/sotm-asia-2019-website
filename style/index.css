@@ -443,6 +443,19 @@ div#comingSoon {
 	pointer-events: none;
 	box-shadow: inset 0px 0px 10px 0px #333;
 }
+#getDirectionToVenue {
+    margin: 5px 0 0 15px;
+}
+#getDirectionToVenue::after {
+   content: '\27a4';
+   color: gray;
+   display: inline-block;
+   transition: all 1s ease;
+}
+#getDirectionToVenue:hover::after {
+   color: cadetblue;
+   transform: rotateX(180deg);
+}
 
 
 
