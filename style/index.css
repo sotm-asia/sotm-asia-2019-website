@@ -416,23 +416,18 @@ div#comingSoon {
 
 
 
-#schedule th:nth-child(1), 
-#schedule td:nth-child(1) {
+div#schedule.row {
+	margin-bottom: 150px;
+}
+#schedule {
+	display: block;
 	text-align: center;
 }
-#schedule table td:nth-child(1) {
-	width: 15%;
-}
-#schedule table td:nth-child(2) {
-	width: 35%;
-}
-#schedule table td:nth-child(3) {
-	width: 50%;
-}
-#schedule table span.venue {
-	display: block;
-	font-size: var(--schedule-individual-venue-font-size);
-	color: var(--schedule-individual-venue-text-color);
+#schedule span {
+	border: 1px solid var(--heading-color);
+	font-size: 2rem;
+	padding: 50px 70px;
+	border-radius: 30px;
 }
 
 
