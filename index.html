@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="style/bootstrap.min.css">
     <script src="script/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Chilanka&display=swap" rel="stylesheet">
 
 
 </head>
@@ -38,8 +39,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a id="bigLogo" href="index.html">
-                        <!-- <img class="logo" src="image/logo.png"> -->
-                        <div style="height: 50px; width: 50px; font-size: 10px; text-align: center; display: inline-block; vertical-align: middle; color: #fff; background-color: #666;"><span style="margin-top: 50%; padding: 0px; display: inline-block; transform: translateY(-50%);">logo<br>50x50</span></div>
+                        <img class="logo" src="image/logo/logo.png">
                         <span>State of the Map Asia 2019</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseToggle" aria-controls="navbarCollapseToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,16 +49,16 @@
                     <div id="navbarCollapseToggle" class="collapse navbar-collapse">
                         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                             <li class="navbar-button">
-                                <a href="program.html">Program</a>
+                                <a class="btn" href="program.html">Program</a>
                             </li>
                             <li class="navbar-button">
-                                <a href="venue.html">Venue</a>
+                                <a class="btn" href="venue.html">Venue</a>
                             </li>
                             <li class="navbar-button">
-                                <a href="https://medium.com/state-of-the-map-asia" target="_blank">Blog</a>
+                                <a class="btn" href="https://medium.com/state-of-the-map-asia" target="_blank">Blog</a>
                             </li>
                             <li class="navbar-button">
-                                <a href="code-of-conduct.html">Code of Conduct</a>
+                                <a class="btn" href="code-of-conduct.html">Code of Conduct</a>
                             </li>
                         </ul>
                         <a href=" https://twitter.com/SotmAsia" target="_blank" title="Follow us on Twitter">
@@ -72,27 +72,17 @@
 
         <div id="firstScreen" class="row">
             <div class="col-sm-3">
-                <!-- <img class="img-fluid logo" src="image/logo.png"> -->
-                <a href="https://wiki.openstreetmap.org/wiki/SotM_Asia_2019/Logo_Contest" target="_blank" title="Submit a logo">
-                    <div style="height: 200px; max-height: 100%; width: 200px; max-width: 100%; text-align: center; display: inline-block; vertical-align: middle; color: #fff; background-color: #666;">
-                        <span style="margin-top: 50%; font-family: times; display: inline-block; transform: translateY(-50%);">
-                            Logo contest
-                            <br>
-                            is
-                            <br>
-                            open now
-                            <br><br>
-                            <small>Submit your logo!</small>
-                        </span>
-                    </div>
-                </a>
-                <h3>SotM Asia 2019</h3>
+                <img class="img-fluid logo" src="image/logo/logo.png">
+                <h3>
+                    <span>SotM Asia 2019</span>
+                    <small>Dhaka, Bangladesh</small>
+                </h3>
             </div>
             <div class="col-sm-6">
                 <div>
                     <span class="date">November 1 &ndash; 2, 2019</span>
                     <p>State of the Map Asia will bring together participants from around the world to discuss challenges, learn, and celebrate many years of mapping together.</p>
-                    <a class="btn btn-success" href="#" onclick="event.preventDefault(); showComingSoon()">Register</a>
+                    <a class="btn" href="#" onclick="event.preventDefault(); showComingSoon()">Register</a>
                     <div id="comingSoon"></div>
                     <div class="affiliation">
                         <h5>Organized by:</h5>
@@ -117,7 +107,7 @@
                 <div class="box">
                     <h3>Call for Poster</h3>
                     <p>Call for posters is open now! Apply if you'd like to show your OSM activities through posters.</p>
-                    <a class="btn btn-success" href="https://wiki.openstreetmap.org/wiki/SotM_Asia_2019_Call_for_Poster" target="_blank">Apply now</a>
+                    <a class="btn" href="https://wiki.openstreetmap.org/wiki/SotM_Asia_2019_Call_for_Poster" target="_blank">Apply now</a>
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6">
@@ -144,8 +134,8 @@
                 <h3>State of the Map Asia 2018</h3>
                 <p>Last year, we were in Bangalore, India. Members of the OpenStreetMap community met to learn the significance of mapping from the perspective of the different countries in Asia &ndash; from Afghanistan to Vietnam. 300+ participants from 12 countries, where one in every six participants was a speaker congregated at the Indian Institute of Management Bangalore.</p>
                 <center>
-                    <a class="button report" target="_blank" href="https://blog.opencagedata.com/post/sotmasia18-roundup" title="SotM Asia 2018 - Bangalore - summary | OpenCage Data Blog">Read about last year</a>
-                    <a class="button youtube" target="_blank" href="https://www.youtube.com/playlist?list=PLgek-8rdOO3ZsCTlb6XZ0As3u16dUxC1t" title="Watch SotM Asia 2018 talks on YouTube">Watch the talks</a>
+                    <a class="btn report" target="_blank" href="https://blog.opencagedata.com/post/sotmasia18-roundup" title="SotM Asia 2018 - Bangalore - summary | OpenCage Data Blog">Read about last year</a>
+                    <a class="btn youtube" target="_blank" href="https://www.youtube.com/playlist?list=PLgek-8rdOO3ZsCTlb6XZ0As3u16dUxC1t" title="Watch SotM Asia 2018 talks on YouTube">Watch the talks</a>
                 </center>
             </div>
         </div>
@@ -156,7 +146,7 @@
             <div class="col-sm-12">
                 <h3>Become our sponsor!</h3>
                 <p>As a partner, you will help us shape the conference this year. Download the sponsorship deck and for more information email us at <a href="mailto:stateofthemapasia@gmail.com">stateofthemapasia@gmail.com</a></p>
-                <a class="btn btn-success" href="mailto:stateofthemapasia@gmail.com">Sponsorship deck</a>
+                <a class="btn" href="mailto:stateofthemapasia@gmail.com">Sponsorship deck</a>
             </div>
             <!-- <div class="col-sm-6">
                 <table class="left">
@@ -231,9 +221,9 @@
                     <span>2019 &copy; All rights reserved</span>
                 </div>
                 <div class="col-sm-4 previous">
-                    <a class="button" href="http://2018.stateofthemap.asia" target="_blank" title="SotM Asia 2018">2018</a>
-                    <a class="button" href="https://2017.stateofthemap.asia/index.html" target="_blank" title="SotM Asia 2017">2017</a>
-                    <a class="button" href="https://2016.stateofthemap.asia" target="_blank" title="SotM Asia 2016">2016</a>
+                    <a class="btn" href="http://2018.stateofthemap.asia" target="_blank" title="SotM Asia 2018">2018</a>
+                    <a class="btn" href="https://2017.stateofthemap.asia/index.html" target="_blank" title="SotM Asia 2017">2017</a>
+                    <a class="btn" href="https://2016.stateofthemap.asia" target="_blank" title="SotM Asia 2016">2016</a>
                 </div>
                 <div class="col-sm-4">
                     <div class="social-media-icons">
