@@ -313,6 +313,11 @@ div#firstScreen.row {
 #firstScreen p {
 	font-size: 1.4rem;
 }
+@media (min-width: 576px) and (max-width: 1200px) {
+	#firstScreen p {
+		font-size: 1.2rem;
+	}
+}
 #firstScreen div.col-sm-4 {
 	text-align: center;
 }
