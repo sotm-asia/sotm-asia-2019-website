@@ -369,6 +369,12 @@ div#comingSoon {
 	margin: 20px 5px;
 	padding: 30px;
 }
+a.box-link {
+	color: inherit;
+}
+a.box-link:hover {
+	opacity: 0.8;
+}
 #boxes .box h3 {
     margin: 0px 0px 20px 0px;
     font-size: 1.5rem;
