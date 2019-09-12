@@ -296,6 +296,11 @@ div#firstScreen.row {
 	font-weight: 600;
 	font-size: 24px;
 }
+@media (max-width: 576px) {
+	#bigLogo span {
+		font-size: 16px;
+	}
+}
 #firstScreen img.img-fluid.logo {
 	margin-bottom: 20px;
 }
@@ -470,18 +475,17 @@ div#schedule.row {
     max-height: 200px;
   }
 }
-
 @media (min-width: 992px) {
   #venueDescription .venue-image img {
     max-height: 280px;
   }
 }
-
 @media (min-width: 1200px) {
   #venueDescription .venue-image img {
     max-height: 330px;
   }
 }
+
 #map, 
 #insetMapShadow {
 	height: var(--venue-map-height);
