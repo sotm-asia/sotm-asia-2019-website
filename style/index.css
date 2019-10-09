@@ -511,20 +511,18 @@ div#schedule.row {
   }
 }
 
-#map, 
-#insetMapShadow {
+div.map {
 	height: var(--venue-map-height);
-}
-#map {
 	margin: 30px 0px 0px 0px;
 	background-color: lightgray;
 }
-#insetMapShadow {
+div.map.overlay {
 	position: relative;
 	margin: calc(0px - var(--venue-map-height)) 0px 0px 0px;
 	z-index: 999999;
 	pointer-events: none;
 	box-shadow: inset 0px 0px 10px 0px #333;
+	background-color: transparent;
 }
 #getDirectionToVenue {
     margin: 15px 0 0 20px;
@@ -553,10 +551,6 @@ div#schedule.row {
 
 
 
-
-#accommodation > div.cont {
-	margin: 30px 0;
-}
 
 #accommodation div.accommodation-image {
 	margin: 0px 0px 20px 0px;

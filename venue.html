@@ -16,10 +16,10 @@
     <script src="script/jquery-3.3.0.min.js"></script>
     <link rel="stylesheet" href="style/bootstrap.min.css">
     <script src="script/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style/leaflet.css">
     <link rel="stylesheet" href="style/index.css">
     <link href="https://fonts.googleapis.com/css?family=Chilanka&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style/leaflet.css">
 
 
 </head>
@@ -90,10 +90,10 @@
                 <p>KIBC Auditorium, the second Largest auditorium in Bangladesh, is owned and managed by Krishibid Institution Bangladesh (KIB). Established with a goal to facilitate professionals from the agricultural sector, this is now a place for knowledge development for all the members of the community.</p>
             </div>
             <div class="col-sm-12">
-                <div id="map"></div>
+                <div class="map" id="venueMap"></div>
             </div>
             <div class="col-sm-12">
-                <div id="insetMapShadow"></div>
+                <div class="overlay map"></div>
             </div>
             <div id="getDirectionToVenue">
                 <a href="https://www.openstreetmap.org/directions?to=krishibid%20institution%20bangladesh#map=14/23.7612/90.3858" target="_blank" title="Get direction on OpenStreetMap">Get direction on OpenStreetMap</a>
@@ -122,45 +122,13 @@
                 <h3>Accommodation</h3>
             </div>
             <div class="col-sm-12">
-                <p>There are a few choices for accommodation in the city. A number of 3-star hotels are available around the venue. At the venue itself, we will be providing some arrangements for accommodation. And in case you are interested, among the 5-start hotels, the following two are the nearest to the venue.</p>
+                <p>There are a few choices for accommodation in Dhaka. At the venue itself, we will be providing some arrangements for accommodation. Aside from that, a number of 3-star hotels are available around the venue, and also a couple of 5-star hotels in the city.</p>
             </div>
-            <div class="cont col-12 col-sm-12 col-md-12 col-lg-6">
-                <div class="accommodation-image image-1"></div>
-                <div class="accommodation-details">
-                    <a href="https://www.panpacific.com/en/hotels-and-resorts/pp-dhaka.html" target="_blank" title="Go to site">
-                        <h5>Pan Pacific Sonargaon</h5>
-                    </a>
-                    <p>A historic 5 star hotel in Dhaka, it is one of the oldest 5 star hotel in Bangladesh and is owned by the Government of Bangladesh and operated by Pan Pacific Hotels and Resorts.</p>
-                </div>
+            <div class="col-sm-12">
+                <div class="map" id="accommodationMap"></div>
             </div>
-            <div class="cont col-12 col-sm-12 col-md-12 col-lg-6">
-                <div class="accommodation-image image-2"></div>
-                <div class="accommodation-details">
-                    <a href="https://www.ihg.com/intercontinental/hotels/us/en/dhaka/dachb/hoteldetail" target="_blank" title="Go to site">
-                        <h5>InterContinental Dhaka</h5>
-                    </a>
-                    <p>A prominent luxury hotel in Ramna in central Dhaka, the capital of Bangladesh, it was the first international five star hotel in the country and opened in 1966, as the Inter-Continental Dacca when the city, (then known as Dacca) was the capital of East Pakistan.</p>
-                </div>
-            </div>
-            <div class="cont col-12 col-sm-12 col-md-12 col-lg-6">
-                <div class="accommodation-image image-3"></div>
-                <div class="accommodation-details">
-                    <a href="https://www.innotelbatonrouge.com" target="_blank" title="Go to site">
-                        <h5>Ambrosia Guest House</h5>
-                    </a>
-                    <p>In the middle of the craziness of Dhaka, Ambrosia is like an island, but well connected with every corner of the city. A posh locality, with a nice, lush green place to help one revive naturally, this is a really lovable place to be.</p>
-                    <p><i><b>Address:</b> House #17, Road #3, Dhanmondi R/A, Dhaka 1205</i></p>
-                </div>
-            </div>
-            <div class="cont col-12 col-sm-12 col-md-12 col-lg-6">
-                <div class="accommodation-image image-4"></div>
-                <div class="accommodation-details">
-                    <a href="https://guest-house-483.business.site" target="_blank" title="Go to site">
-                        <h5>Innotel Luxury Business Hotel</h5>
-                    </a>
-                    <p>Innotel Luxury Business Hotel offers warm hospitality and impeccable service. The hotel is situated at the heart of Dhaka city, in the Banani area. Exclusive hospitality, management and stunning design of this hotel will always make you feel at home.</p>
-                    <p><i><b>Address:</b> House #23, Road #10, Block E, Banani, Dhaka 1213</i></p>
-                </div>
+            <div class="col-sm-12">
+                <div class="overlay map"></div>
             </div>
         </div>
 
@@ -235,16 +203,71 @@
         popupAnchor: [0, -41],
     });
 
-    let latLong = [23.7595168, 90.3854013];
+    let tileURL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 
-    let map = L.map("map");
+    let venueLatLong = [23.7595168, 90.3854013];
 
-    map.setView(latLong, 15);
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png ").addTo(map);
+    // Lat-longs, names and website addresses for suggested hotels.
+    let accommData = [
+        [ [23.7493253, 90.3932721], "Pan Pacific Sonargaon",         "https://www.panpacific.com/en/hotels-and-resorts/pp-dhaka.html"            ],
+        [ [23.7409042, 90.3969294], "InterContinental Dhaka",        "https://www.ihg.com/intercontinental/hotels/us/en/dhaka/dachb/hoteldetail" ],
+        [ [23.7398907, 90.3809273], "Ambrosia Guest House",          "https://guest-house-483.business.site"                                     ],
+        [ [23.7922094, 90.4066287], "Innotel Luxury Business Hotel", "https://www.innotelbatonrouge.com"                                         ],
+        [ [23.7928103, 90.4042777], "Nordic Hotel",                  "http://www.nordichotels.com.bd"                                            ],
+        [ [23.7928103, 90.4042777], "Hotel Sarina",                  "https://www.sarinahotel.com"                                               ],
+        [ [23.7384286, 90.3779269], "Hotel Ambala Inn",              "http://www.ambalainn.com"                                                  ],
+        [ [23.7908547, 90.4031440], "Platinum Suites",               "http://www.platinumhotels.com.bd/platinum-suites/contact.php"              ],
+        [ [23.7907640, 90.4036422], "Platinum Grand",                "http://www.platinumhotels.com.bd/platinum-grand"                           ],
+        [ [23.7900870, 90.4126676], "Amari Dhaka",                   "https://www.amari.com/dhaka"                                               ],
+        [ [23.7583178, 90.3893801], "Hotel Indropuri",               "http://hotel-indropuri.dhaka-hotel.com/en"                                 ],
+        [ [23.7578564, 90.3906248], "Hotel Givenci",                 "http://hotel-givenci.dhaka-hotel.com/en"                                   ],
+    ];
 
-    let marker = L.marker(latLong, {icon: markerIcon});
-    marker.addTo(map);
-    marker.bindPopup("Krishibid Institution Bangladesh (KIB)").openPopup();
+    // Create map for venue.
+    let venueMap = L.map("venueMap");
+    venueMap.setView(venueLatLong, 15);
+    L.tileLayer(tileURL).addTo(venueMap);
+
+    // Put marker on venue.
+    let venueMarker = L.marker(venueLatLong, {icon: markerIcon});
+    venueMarker
+        .addTo(venueMap)
+        .bindPopup("Krishibid Institution Bangladesh (KIB)")
+            .openPopup();
+
+    // Create map for hotels.
+    let accommMap = L.map("accommodationMap");
+    L.tileLayer(tileURL).addTo(accommMap);
+
+    let markerGroup = new L.featureGroup();
+
+    // Put markers on all hotels.
+    for (let c=0; c<accommData.length; ++c) {
+    
+        // Link website address to pop-up text.
+        let popupContentHTML = "<a href='" 
+            + accommData[c][2] 
+            + "'"
+            + " target='_blank'"
+            + " title='Go to site'"
+            + ">"
+            + accommData[c][1]
+            + "</a>";
+    
+        let marker = L.marker(accommData[c][0], {icon: markerIcon});
+        marker
+            .addTo(accommMap)
+            .bindPopup(popupContentHTML, {autoClose: false})
+                .openPopup();
+
+        // Add each marker to group to get screen boundary that contains all
+        // of them.
+        marker.addTo(markerGroup);
+
+    }
+
+    // Fit all markers within screen.
+    accommMap.fitBounds(markerGroup.getBounds(), {padding: [25, 25]});
 
 
 
