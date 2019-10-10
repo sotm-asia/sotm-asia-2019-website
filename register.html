@@ -80,11 +80,11 @@
                     <div class="section general">
                         <p class="block">
                             <span class="label">First name:</span>
-                            <input type="text" name="firstName" required>
+                            <input type="text" name="first_name" required>
                         </p>
                         <p class="block">
                             <span class="label">Last name:</span>
-                            <input type="text" name="lastName" required>
+                            <input type="text" name="last_name" required>
                         </p>
                         <p class="block">
                             <span class="label">Gender:</span>
@@ -97,7 +97,7 @@
                         </p>
                         <p class="block">
                             <span class="label">Speaking at conference?</span>
-                            <select name="speaker" required>
+                            <select name="speaking" required>
                                 <option value="1">Yes</option>
                                 <option value="0">No</option>
                             </select>
@@ -108,7 +108,7 @@
                         </p>
                         <p class="block">
                             <span class="label">Ticket type:</span>
-                            <select name="ticketType" required>
+                            <select name="ticket_type" required>
                                 <option value="" disabled selected>Select type</option>
                                 <option value="individual">Individual</option>
                                 <option value="community">Community</option>
@@ -120,7 +120,7 @@
                     <div class="section amount">
                         <p class="block hidden">
                             <span class="label">Number of attendees:</span>
-                            <select name="amount">
+                            <select name="ticket_amount">
                                 <option value="" disabled selected>Select number</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -144,7 +144,7 @@
                                     <option value="XXL">XXL</option>
                                 `;
 
-                                let ticketTypeField = document.getElementsByName('ticketType')[0];
+                                let ticketTypeField = document.getElementsByName('ticket_type')[0];
 
                                 ticketTypeField.addEventListener('change', function (e) {
                                     if (e.target.value=="corporate") {
@@ -152,7 +152,7 @@
                                         clearAttendeeDetails();
                                         resetField("amount");
 
-                                        let amountField = document.getElementsByName('amount')[0];
+                                        let amountField = document.getElementsByName('ticket_amount')[0];
                                         amountField.closest('p.block').classList.remove("hidden");
 
                                         amountField.addEventListener('change', function (e) {
@@ -250,7 +250,7 @@
                                     inputLabel.innerText = "Diet preference:";
 
                                     let select = document.createElement('select');
-                                    select.name = "diet" + "_p" + (index==-1?1:index+1);
+                                    select.name = "p" + (index==-1?1:index+1) + "_diet";
                                     select.innerHTML = dietOptionsHTML;
 
                                     block.appendChild(inputLabel);
@@ -266,7 +266,7 @@
                                     inputLabel.innerText = "T-shirt size:";
 
                                     select = document.createElement('select');
-                                    select.name = "tShirt" + "_p" + (index==-1?1:index+1);
+                                    select.name = "p" + (index==-1?1:index+1) + "_tshirt";
                                     select.innerHTML = tShirtOptionsHTML;
 
                                     block.appendChild(inputLabel);
