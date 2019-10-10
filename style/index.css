@@ -33,9 +33,12 @@ a.btn:not([href]):not([tabindex]):hover {
 	--schedule-individual-venue-text-color: #aaa;
 	--schedule-individual-venue-font-size: 14px;
 	--venue-map-height: 400px;
-	--heading-color: darkseagreen;
-	--heading-left-border-color: seagreen;
-	--button-color: #2b9a81;
+	--logo-color-1a: rgba(38, 34, 98, 1);
+	--logo-color-1b: rgba(85, 83, 130, 1);
+	--logo-color-1c: rgba(134, 132, 165, 1);
+	--logo-color-2a: rgba(5, 104, 57, 1);
+	--logo-color-3a: rgba(191, 30, 45, 1);
+	--logo-color-3c: rgba(230, 105, 117, 1);
 }
 html, body {
 	margin: 0px;
@@ -46,11 +49,11 @@ body {
 }
 a {
 	text-decoration: none;
-	color: var(--button-color);
+	color: var(--logo-color-1a);
 }
 a:hover {
 	text-decoration: none;
-	color: var(--heading-left-border-color);
+	color: var(--logo-color-2a);
 }
 p {
 	text-align: justify;
@@ -59,13 +62,16 @@ p {
 
 
 
-h3 {
+h3,
+h5 {
 	font-weight: 600;
+}
+h3 {
+	color: #fff;
 	margin: 0px 0px 30px 0px;
 }
 h5 {
 	font-size: 1.5rem;
-	font-weight: 600;
 }
 
 
@@ -79,9 +85,10 @@ h5 {
 #accommodation h3,
 #visa h3,
 #programDescription h3,
+#codeOfConduct h3,
 #boxes .box {
-	background-color: var(--heading-color);
-	border-left-color: var(--heading-left-border-color);
+	background-color: var(--logo-color-1c);
+	border-left-color: var(--logo-color-1a);
 	border-left-style: solid;
 }
 #lastYear h3,
@@ -91,13 +98,21 @@ h5 {
 #getToDhaka h3,
 #accommodation h3,
 #visa h3,
-#programDescription h3 {
+#programDescription h3,
+#codeOfConduct h3 {
 	border-left-width: 10px;
 	padding: 5px 10px;
 	padding-top: 10px;
 }
 #boxes .box {
 	border-left-width: 20px;
+}
+#boxes .box.closed,
+#boxes .box.closed a {
+	color: var(--logo-color-3a);
+}
+#boxes .box.closed a:hover {
+	color: var(--logo-color-2a);
 }
 
 
@@ -138,7 +153,7 @@ a.button:hover {
 
 .button, 
 a.btn {
-	background-color: var(--button-color);
+	background-color: var(--logo-color-1b);
 	color: #fff;
 	font-weight: 600;
 	border-right: 4px solid transparent;
@@ -177,7 +192,7 @@ div.cross {
 div#header.row {
 	margin-top: 0px;
 	margin-bottom: 50px;
-	background-color: var(--heading-color);
+	background-color: var(--logo-color-1b);
 }
 #header img.logo {
 	width: 55px;
@@ -211,7 +226,7 @@ div#header.row {
 #footer {
 	padding: 15px 16px;
 	color: #fff;
-	background-color: var(--heading-color);
+	background-color: var(--logo-color-1b);
 }
 #footer div.row {
 	margin: 0px 0px 0px 0px;
@@ -301,9 +316,10 @@ div#firstScreen.row {
 	margin-right: 10px;
 }
 #bigLogo span {
-	color: #000;
+	color: #fff;
 	font-weight: 600;
 	font-size: 24px;
+	vertical-align: sub;
 }
 @media (max-width: 576px) {
 	#bigLogo span {
@@ -317,7 +333,7 @@ div#firstScreen.row {
 	margin: 0 0 50px 0;
 	font-weight: 600;
 	text-align: center;
-	color: #f02b08;
+	color: var(--logo-color-1a);
 }
 #firstScreen p {
 	font-size: 1.4rem;
@@ -344,7 +360,7 @@ div#firstScreen.row {
 }
 #firstScreen .date {
 	font-size: 30px;
-	color: var(--button-color);
+	color: var(--logo-color-1a);
 	font-weight: 600;
 }
 
@@ -467,7 +483,7 @@ div#schedule.row {
 	min-width: 450px;
 }
 #schedule span {
-	border: 1px solid var(--heading-color);
+	border: 1px solid var(--logo-color-1b);
 	font-size: 1.5rem;
 	padding: 40px 50px;
 	border-radius: 30px;
@@ -506,20 +522,18 @@ div#schedule.row {
   }
 }
 
-#map, 
-#insetMapShadow {
+div.map {
 	height: var(--venue-map-height);
-}
-#map {
 	margin: 30px 0px 0px 0px;
 	background-color: lightgray;
 }
-#insetMapShadow {
+div.map.overlay {
 	position: relative;
 	margin: calc(0px - var(--venue-map-height)) 0px 0px 0px;
 	z-index: 999999;
 	pointer-events: none;
 	box-shadow: inset 0px 0px 10px 0px #333;
+	background-color: transparent;
 }
 #getDirectionToVenue {
     margin: 15px 0 0 20px;
@@ -533,7 +547,7 @@ div#schedule.row {
 }
 #getDirectionToVenue:hover::after {
    color: cadetblue;
-   transform: rotateX(180deg);
+   transform: rotateY(360deg);
 }
 
 
@@ -550,7 +564,7 @@ div#schedule.row {
 
 
 #accommodation div.accommodation-image {
-	margin: 0px 0px 30px 0px;
+	margin: 0px 0px 20px 0px;
 	height: 300px;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -561,6 +575,12 @@ div#schedule.row {
 }
 #accommodation .accommodation-image.image-2 {
 	background-image: url("../image/accommodation-2.jpeg");
+}
+#accommodation .accommodation-image.image-3 {
+	background-image: url("../image/accommodation-3.png");
+}
+#accommodation .accommodation-image.image-4 {
+	background-image: url("../image/accommodation-4.png");
 }
 
 
