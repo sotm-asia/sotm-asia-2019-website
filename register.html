@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+
+<html>
+
+
+
+
+<head>
+
+
+    <title>Registration | State of the Map Asia 2019</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script/jquery-3.3.0.min.js"></script>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <script src="script/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Chilanka&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="script/index.js"></script>
+
+
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+
+    <div id="pageContainer" class="container">
+
+
+        <div id="header" class="row">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a id="bigLogo" href="index.html">
+                        <img class="logo" src="image/logo/logo.png">
+                        <span>State of the Map Asia 2019</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseToggle" aria-controls="navbarCollapseToggle" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div id="navbarCollapseToggle" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                            <li class="navbar-button">
+                                <a class="btn" href="program.html">Program</a>
+                            </li>
+                            <li class="navbar-button">
+                                <a class="btn" href="venue.html">Venue</a>
+                            </li>
+                            <li class="navbar-button">
+                                <a class="btn" href="https://medium.com/state-of-the-map-asia" target="_blank">Blog</a>
+                            </li>
+                            <li class="navbar-button">
+                                <a class="btn" href="code-of-conduct.html">Code of Conduct</a>
+                            </li>
+                        </ul>
+                        <a href=" https://twitter.com/SotmAsia" target="_blank" title="Follow us on Twitter">
+                            <button id="followOnTwitter" type="button" class="btn btn-light">Follow us</button>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+
+
+        <div id="form" class="row">
+            <div class="col-sm-12">
+                <form action="payment.php" method="POST">
+
+                    <div class="section general">
+                        <p class="block">
+                            <span class="label">First name:</span>
+                            <input type="text" name="firstName" required>
+                        </p>
+                        <p class="block">
+                            <span class="label">Last name:</span>
+                            <input type="text" name="lastName" required>
+                        </p>
+                        <p class="block">
+                            <span class="label">Gender:</span>
+                            <select name="gender" required>
+                                <option value="" disabled selected>Select gender</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                                <option value="wontTell">Prefer not to say</option>
+                            </select>
+                        </p>
+                        <p class="block">
+                            <span class="label">Speaking at conference?</span>
+                            <select name="speaker" required>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </p>
+                        <p class="block">
+                            <span class="label">Country:</span>
+                            <input type="text" name="country">
+                        </p>
+                        <p class="block">
+                            <span class="label">Ticket type:</span>
+                            <select name="ticketType" required>
+                                <option value="" disabled selected>Select type</option>
+                                <option value="individual">Individual</option>
+                                <option value="community">Community</option>
+                                <option value="corporate">Corporate</option>
+                            </select>
+                        </p>
+                    </div>
+
+                    <div class="section amount">
+                        <p class="block hidden">
+                            <span class="label">Number of attendees:</span>
+                            <select name="amount">
+                                <option value="" disabled selected>Select number</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </p>
+
+                        <script type="text/javascript">
+                            {
+                                let dietOptionsHTML = `
+                                    <option value="veg">Vegetarian</option>
+                                    <option value="nonveg">Non-vegetarian</option>
+                                `;
+
+                                let tShirtOptionsHTML = `
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="XXL">XXL</option>
+                                `;
+
+                                let ticketTypeField = document.getElementsByName('ticketType')[0];
+
+                                ticketTypeField.addEventListener('change', function (e) {
+                                    if (e.target.value=="corporate") {
+                                        toggleAmountField(1);
+                                        clearAttendeeDetails();
+                                        resetField("amount");
+
+                                        let amountField = document.getElementsByName('amount')[0];
+                                        amountField.closest('p.block').classList.remove("hidden");
+
+                                        amountField.addEventListener('change', function (e) {
+                                            let num = parseInt(e.target.value);
+                                            let detailsSection = document.querySelector('div.section.details');
+
+                                            clearAttendeeDetails();
+
+                                            for (let c=0; c<num; ++c) {
+                                                if (num==1) {
+                                                    createTShirtAndDietFields(-1);
+                                                } else {
+                                                    createTShirtAndDietFields(c);
+                                                }
+                                            }
+                                        });
+
+                                    }
+
+                                    else {
+
+                                        clearAttendeeDetails();
+                                        toggleAmountField(0);
+
+                                        if (e.target.value=="community") {
+                                            createOrgField();
+                                        }
+
+                                        createTShirtAndDietFields(-1);
+
+                                    }
+                                });
+
+                                function resetField(fieldName) {
+                                    let field = document.getElementsByName(fieldName)[0];
+                                    if (fieldName=="amount") {
+                                        for (let c=0; c<field.children.length; ++c) {
+                                            field.children[c].selected = field.children[c].defaultSelected;
+                                        }
+                                    }
+                                }
+
+                                function clearAttendeeDetails() {
+                                    document.querySelector('div.section.details').innerHTML = "";
+                                }
+
+                                function toggleAmountField(show) {
+                                    let amountField = document.querySelector('div.section.amount');
+                                    if (show) {
+                                        amountField.classList.remove("hidden");
+                                    } else {
+                                        amountField.classList.add("hidden");
+                                    }
+                                }
+
+                                function createOrgField() {
+                                    let block = document.createElement('p');
+                                    block.classList.add("block");
+
+                                    let inputLabel = document.createElement('span');
+                                    inputLabel.classList.add("label");
+                                    inputLabel.innerText = "Organization:";
+
+                                    let input = document.createElement('input');
+                                    input.type = "text";
+                                    input.name = "organization";
+
+                                    block.appendChild(inputLabel);
+                                    block.appendChild(input);
+
+                                    let detailsSection = document.querySelector('div.section.details');
+                                    detailsSection.appendChild(block);
+                                }
+
+                                function createTShirtAndDietFields(index) {
+                                    let detailsSection = document.querySelector('div.section.details');
+
+                                    let boxCont = document.createElement('div');
+                                    boxCont.classList.add("cont");
+
+                                    let box = document.createElement('fieldset');
+
+                                    if (index!=-1) {
+                                        box.classList.add("box");
+                                        let boxLabel = document.createElement('legend');
+                                        boxLabel.innerText = "Person " + (index+1);
+                                        box.appendChild(boxLabel);
+                                    }
+
+                                    let block = document.createElement('p');
+                                    block.classList.add("block");
+
+                                    let inputLabel = document.createElement('span');
+                                    inputLabel.classList.add("label");
+                                    inputLabel.innerText = "Diet preference:";
+
+                                    let select = document.createElement('select');
+                                    select.name = "diet" + "_p" + (index==-1?1:index+1);
+                                    select.innerHTML = dietOptionsHTML;
+
+                                    block.appendChild(inputLabel);
+                                    block.appendChild(select);
+
+                                    box.appendChild(block);
+
+                                    block = document.createElement('p');
+                                    block.classList.add("block");
+
+                                    inputLabel = document.createElement('span');
+                                    inputLabel.classList.add("label");
+                                    inputLabel.innerText = "T-shirt size:";
+
+                                    select = document.createElement('select');
+                                    select.name = "tShirt" + "_p" + (index==-1?1:index+1);
+                                    select.innerHTML = tShirtOptionsHTML;
+
+                                    block.appendChild(inputLabel);
+                                    block.appendChild(select);
+
+                                    box.appendChild(block);
+
+                                    boxCont.appendChild(box);
+                                    detailsSection.appendChild(boxCont);
+                                }
+                            }
+                        </script>
+
+                    </div>
+
+                    <div class="section details"></div>
+
+                    <div class="section coupon">
+                        <p class="block">
+                            <span class="label">Have a coupon?</span>
+                            <input type="text" name="coupon" required>
+                        </p>
+                        <p class="block">
+                            <button onclick="event.preventDefault(); checkCouponValidity()">Check coupon validity</button>
+                        </p>
+                    </div>
+
+                    <div class="section">
+                        <p class="block">
+                            <button class="button full-btn" type="submit">Proceed to payment</button>
+                        </p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+        <div id="footer" class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <span>2019 &copy; All rights reserved</span>
+                </div>
+                <div class="col-sm-4 previous">
+                    <a class="btn" href="http://2018.stateofthemap.asia" target="_blank" title="SotM Asia 2018">2018</a>
+                    <a class="btn" href="https://2017.stateofthemap.asia/index.html" target="_blank" title="SotM Asia 2017">2017</a>
+                    <a class="btn" href="https://2016.stateofthemap.asia" target="_blank" title="SotM Asia 2016">2016</a>
+                </div>
+                <div class="col-sm-4">
+                    <div class="social-media-icons">
+                        <a href="https://www.youtube.com/channel/UCR7PMzU0l__u8Pt73QyHWAQ" target="_blank">
+                            <img class="icon" title="Find us on YouTube" src="image/icon/youtube.png">
+                        </a>
+                        <a href="https://www.instagram.com/sotm_asia" target="_blank">
+                            <img class="icon" title="Find us on Instagram" src="image/icon/instagram.png">
+                        </a>
+                        <a href="https://www.facebook.com/SotmAsia" target="_blank">
+                            <img class="icon" title="Find us on Facebook" src="image/icon/facebook.png">
+                        </a>
+                        <a href="https://t.me/OpenStreetMapAsia" target="_blank">
+                            <img class="icon" title="Find us on Telegram" src="image/icon/telegram.png">
+                        </a>
+                        <a href="https://twitter.com/SotmAsia" target="_blank">
+                            <img class="icon" title="Find us on Twitter" src="image/icon/twitter.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>

@@ -136,7 +136,7 @@ a.button:hover {
 	background-color: #ccc;
 }
 
-a.button, 
+.button, 
 a.btn {
 	background-color: var(--button-color);
 	color: #fff;
@@ -144,11 +144,18 @@ a.btn {
 	border-right: 4px solid transparent;
 	border-bottom: 4px solid transparent;
 	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
-a.button:hover, 
+.button:hover, 
 a.btn:hover {
+	cursor: pointer;
 	border-right-color: var(--heading-left-border-color);
 	border-bottom-color: var(--heading-left-border-color);
+}
+
+.full-btn {
+	width: 100%;
 }
 
 div.cross {
@@ -157,6 +164,10 @@ div.cross {
 
 .cross:hover {
 	cursor: pointer;
+}
+
+.hidden {
+	display: none;
 }
 
 
@@ -578,4 +589,75 @@ div#schedule.row {
 	margin: 5px 0px 0px 0px;
 	list-style: circle;
 	text-align: justify;
+}
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*                             Registration page                             */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+#form form {
+	max-width: 500px;
+	margin: auto;
+}
+
+form div.section {
+	margin-bottom: 50px;
+}
+
+form p.block {
+	text-align: center;
+}
+
+form span.label {
+	display: inline-block;
+	text-align: left;
+	width: 240px;
+}
+
+form div.cont {
+	text-align: center;
+}
+
+form div.cont > fieldset.box {
+	margin: 10px;
+	padding: 0 15px;
+	display: inline-block;
+	border: 1px dotted gray;
+}
+
+fieldset.box legend {
+	margin-bottom: 0;
+	display: inline-block;
+	padding: 0 10px;
+	text-align: left;
+	width: unset;
+	font-size: 1rem;
+}
+
+form input,
+form select {
+	padding: 3px 10px;
+	padding-top: 6px;
+	width: 250px;
+}
+
+form input[name="coupon"] {
+	border: 2px solid initial;
+}
+
+form input[name="coupon"].error {
+	border-color: rgb(251, 122, 147);
+}
+
+form input[name="coupon"].success {
+	border-color: lightgreen;
 }
