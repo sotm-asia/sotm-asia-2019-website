@@ -197,10 +197,22 @@
 
     let markerIcon = L.icon({
         iconUrl: "image/icon/marker-icon.png",
+        iconSize: [30, 50],
+        iconAnchor: [(30/2), 50],
         shadowUrl: "image/icon/marker-shadow.png",
-        iconSize: [25, 41],
-        iconAnchor: [12.5, 41],
-        popupAnchor: [0, -41],
+        shadowSize: [50, 50],
+        shadowAnchor: [(30/2), 50],
+        popupAnchor: [0, (-50+1)],
+    });
+
+    let sotmMarkerIcon = L.icon({
+        iconUrl: "image/icon/marker-icon-sotma.png",
+        iconSize: [66, 85],
+        iconAnchor: [(66/2), 85],
+        shadowUrl: "image/icon/marker-shadow.png",
+        shadowSize: [(85+17), (85+17)],
+        shadowAnchor: [(66/2), (85+17+1)],
+        popupAnchor: [0, (-85+7)],
     });
 
     let tileURL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
@@ -228,7 +240,7 @@
     L.tileLayer(tileURL).addTo(venueMap);
 
     // Put marker on venue.
-    let venueMarker = L.marker(venueLatLong, {icon: markerIcon});
+    let venueMarker = L.marker(venueLatLong, {icon: sotmMarkerIcon});
     venueMarker
         .addTo(venueMap)
         .bindPopup("Krishibid Institution Bangladesh (KIB)")
@@ -239,6 +251,12 @@
     L.tileLayer(tileURL).addTo(accommMap);
 
     let markerGroup = new L.featureGroup();
+
+    // Add venue marker to accommodation map too.
+    let accommVenueMarker = L.marker(venueLatLong, {icon: sotmMarkerIcon});
+    accommVenueMarker
+        .addTo(accommMap)
+        .bindPopup("Krishibid Institution Bangladesh (KIB)");
 
     // Put markers on all hotels.
     for (let c=0; c<accommData.length; ++c) {
