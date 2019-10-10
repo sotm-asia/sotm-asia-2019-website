@@ -32,7 +32,7 @@ a.btn:not([href]):not([tabindex]):hover {
 	--sponsor-header-color: #aaa;
 	--schedule-individual-venue-text-color: #aaa;
 	--schedule-individual-venue-font-size: 14px;
-	--venue-map-height: 400px;
+	--map-height: 400px;
 	--logo-color-1a: rgba(38, 34, 98, 1);
 	--logo-color-1b: rgba(85, 83, 130, 1);
 	--logo-color-1c: rgba(134, 132, 165, 1);
@@ -165,8 +165,8 @@ a.btn {
 .button:hover, 
 a.btn:hover {
 	cursor: pointer;
-	border-right-color: var(--heading-left-border-color);
-	border-bottom-color: var(--heading-left-border-color);
+	border-right-color: var(--logo-color-1a);
+	border-bottom-color: var(--logo-color-1a);
 }
 
 .full-btn {
@@ -523,13 +523,13 @@ div#schedule.row {
 }
 
 div.map {
-	height: var(--venue-map-height);
+	height: var(--map-height);
 	margin: 30px 0px 0px 0px;
 	background-color: lightgray;
 }
 div.map.overlay {
 	position: relative;
-	margin: calc(0px - var(--venue-map-height)) 0px 0px 0px;
+	margin: calc(0px - var(--map-height)) 0px 0px 0px;
 	z-index: 999999;
 	pointer-events: none;
 	box-shadow: inset 0px 0px 10px 0px #333;
