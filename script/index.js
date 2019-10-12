@@ -4,47 +4,62 @@
 
 
 
-// $(document).ready(function() {
-//     let url = "https://script.google.com/macros/s/AKfycbzB2-Xue2sbiBfx8ANUNGmfe_4FmBxz5hxCP1Q2fyejFuMVCe0/exec";
-//     $('#form').on('submit', function(e) {
-//         console.log(form);
-//         e.preventDefault();
-//         let $form = $(e.target);
-//         console.log($form);
-//         let jqxhr = $.post(url, $form.serialize(), function(data) {
-//             console.log("Success! Data: " + data.statusText);
-//             $(location).attr('href', 'venue.html');
-//         })
-//         .fail(function(data) {
-//             console.warn("Error! Data: " + data.statusText);
-//         });
-//     });
-// });
-
-
-
-
-
 //
 function submitFormData() {
     let url = "https://script.google.com/macros/s/AKfycbzB2-Xue2sbiBfx8ANUNGmfe_4FmBxz5hxCP1Q2fyejFuMVCe0/exec";
     let form = document.getElementById('form').querySelector('form');
-    let data = new FormData(form);
 
+    let ticketType = document.getElementsByName('ticket_type')[0].value;
+    let numTickets = document.getElementsByName('num_of_ticket')[0].value;
+    let firstName = document.getElementsByName('first_name')[0].value;
+
+    let priceBeforeDiscount = ticketType=="individual"
+        ? (numTickets * 20)
+        : ticketType=="community"
+            ? (numTickets * 40)
+            : ticketType=="corporate"
+                ? (numTickets * 200)
+                : 0;
+
+    let priceAfterDiscount = ticketType=="individual"
+        ? (priceBeforeDiscount * 15)
+        : ticketType=="community"
+            ? (priceBeforeDiscount * 10)
+            : ticketType=="corporate"
+                ? (priceBeforeDiscount * 5)
+                : 0;
+
+
+    let data = "first_name=" + firstName
+        + "&" + "last_name=" + document.getElementsByName('last_name')[0].value
+        + "&" + "gender=" + document.getElementsByName('gender')[0].value
+        + "&" + "email=" + document.getElementsByName('email')[0].value
+        + "&" + "phone=" + document.getElementsByName('phone')[0].value
+        + "&" + "country=" + document.getElementsByName('country')[0].value
+        + "&" + "speaking=" + document.getElementsByName('speaking')[0].value
+        + "&" + "ticket_type=" + ticketType
+        + "&" + "num_of_ticket=" + numTickets
+        + "&" + "ticket_price=" + priceAfterDiscount
+        + "&" + "p1_diet=" + document.getElementsByName('p1_diet')[0].value
+        + "&" + "p1_tshirt=" + document.getElementsByName('p1_tshirt')[0].value
+        + "&" + "p2_diet=" + (document.getElementsByName('p2_diet').length>1? document.getElementsByName('p2_diet')[0].value : "")
+        + "&" + "p2_tshirt=" + (document.getElementsByName('p2_tshirt').length>1? document.getElementsByName('p2_tshirt')[0].value : "")
+        + "&" + "p3_diet=" + (document.getElementsByName('p3_diet').length>1? document.getElementsByName('p3_diet')[0].value : "")
+        + "&" + "p3_tshirt=" + (document.getElementsByName('p3_tshirt').length>1? document.getElementsByName('p3_tshirt')[0].value : "")
+        + "&" + "organization=" + (document.getElementsByName('organization').length>1? document.getElementsByName('organization')[0].value : "")
+        + "&" + "coupon=" + document.getElementsByName('coupon')[0].value;
+        
     let xHReq = new XMLHttpRequest();
 
     xHReq.onreadystatechange = function () {
         if (this.readyState==4 && this.status==200) {
             let response = JSON.parse(xHReq.response);
-            console.log(response);
+            location.href = "http://sandbox.sslcommerz.com/gwprocess/v4/gw.php?Q=PAY&SESSIONKEY=" + response.sessionkey;
         }
     }
 
-    xHReq.open("POST", url, true);
-    xHReq.setRequestHeader('Access-Control-Allow-Origin', '*');
-    xHReq.setRequestHeader('Content-type','application/json; charset=utf-8');
-    // xHReq.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-    xHReq.send(data);
+    xHReq.open("GET", (url + "?" + data), true);
+    xHReq.send();
 }
 
 
