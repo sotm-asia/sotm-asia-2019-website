@@ -4,6 +4,53 @@
 
 
 
+// $(document).ready(function() {
+//     let url = "https://script.google.com/macros/s/AKfycbzB2-Xue2sbiBfx8ANUNGmfe_4FmBxz5hxCP1Q2fyejFuMVCe0/exec";
+//     $('#form').on('submit', function(e) {
+//         console.log(form);
+//         e.preventDefault();
+//         let $form = $(e.target);
+//         console.log($form);
+//         let jqxhr = $.post(url, $form.serialize(), function(data) {
+//             console.log("Success! Data: " + data.statusText);
+//             $(location).attr('href', 'venue.html');
+//         })
+//         .fail(function(data) {
+//             console.warn("Error! Data: " + data.statusText);
+//         });
+//     });
+// });
+
+
+
+
+
+//
+function submitFormData() {
+    let url = "https://script.google.com/macros/s/AKfycbzB2-Xue2sbiBfx8ANUNGmfe_4FmBxz5hxCP1Q2fyejFuMVCe0/exec";
+    let form = document.getElementById('form').querySelector('form');
+    let data = new FormData(form);
+
+    let xHReq = new XMLHttpRequest();
+
+    xHReq.onreadystatechange = function () {
+        if (this.readyState==4 && this.status==200) {
+            let response = JSON.parse(xHReq.response);
+            console.log(response);
+        }
+    }
+
+    xHReq.open("POST", url, true);
+    xHReq.setRequestHeader('Access-Control-Allow-Origin', '*');
+    xHReq.setRequestHeader('Content-type','application/json; charset=utf-8');
+    // xHReq.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+    xHReq.send(data);
+}
+
+
+
+
+
 // Check if entered coupon is valid or invalid.
 function checkCouponValidity() {
     let ticketType = document.getElementsByName('ticketType')[0].value;

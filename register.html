@@ -75,7 +75,7 @@
 
         <div id="form" class="row">
             <div class="col-sm-12">
-                <form action="payment.php" method="POST">
+                <form action="" method="">
 
                     <div class="section general">
                         <p class="block">
@@ -297,14 +297,11 @@
                             <span class="label">Have a coupon?</span>
                             <input type="text" name="coupon" required>
                         </p>
-                        <p class="block">
-                            <button onclick="event.preventDefault(); checkCouponValidity()">Check coupon validity</button>
-                        </p>
                     </div>
 
                     <div class="section">
                         <p class="block">
-                            <button class="button full-btn" type="submit">Proceed to payment</button>
+                            <button class="button full-btn" type="submit" onclick="event.preventDefault(); submitFormData()">Proceed to payment</button>
                         </p>
                     </div>
 
