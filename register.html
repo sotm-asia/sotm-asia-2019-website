@@ -111,6 +111,10 @@
                             </select>
                         </p>
                         <p class="block">
+                            <span class="label">City:</span>
+                            <input type="text" name="city">
+                        </p>
+                        <p class="block">
                             <span class="label">Country:</span>
                             <input type="text" name="country">
                         </p>
@@ -158,10 +162,9 @@
                                     if (e.target.value=="corporate") {
                                         toggleAmountField(1);
                                         clearAttendeeDetails();
-                                        resetField("amount");
+                                        resetField("num_of_ticket");
 
-                                        let amountField = document.getElementsByName('ticket_amount')[0];
-                                        amountField.closest('p.block').classList.remove("hidden");
+                                        let amountField = document.getElementsByName('num_of_ticket')[0];
 
                                         amountField.addEventListener('change', function (e) {
                                             let num = parseInt(e.target.value);
@@ -196,7 +199,7 @@
 
                                 function resetField(fieldName) {
                                     let field = document.getElementsByName(fieldName)[0];
-                                    if (fieldName=="amount") {
+                                    if (fieldName=="num_of_ticket") {
                                         for (let c=0; c<field.children.length; ++c) {
                                             field.children[c].selected = field.children[c].defaultSelected;
                                         }
@@ -208,11 +211,11 @@
                                 }
 
                                 function toggleAmountField(show) {
-                                    let amountField = document.querySelector('div.section.amount');
+                                    let amountSection = document.querySelector('div.section.amount');
                                     if (show) {
-                                        amountField.classList.remove("hidden");
+                                        amountSection.querySelector('p.block').classList.remove("hidden");
                                     } else {
-                                        amountField.classList.add("hidden");
+                                        amountSection.querySelector('p.block').classList.add("hidden");
                                     }
                                 }
 
