@@ -159,44 +159,65 @@
 
                                 let ticketTypeField = document.getElementsByName('ticket_type')[0];
 
-                                ticketTypeField.addEventListener('change', function (e) {
-                                    if (e.target.value=="corporate") {
-                                        toggleAmountField(1);
-                                        clearAttendeeDetails();
-                                        resetField("num_of_ticket");
-
-                                        let amountField = document.getElementsByName('num_of_ticket')[0];
-
-                                        amountField.addEventListener('change', function (e) {
-                                            let num = parseInt(e.target.value);
-                                            let detailsSection = document.querySelector('div.section.details');
-
-                                            clearAttendeeDetails();
-
-                                            for (let c=0; c<num; ++c) {
-                                                if (num==1) {
-                                                    createTShirtAndDietFields(-1);
-                                                } else {
-                                                    createTShirtAndDietFields(c);
-                                                }
-                                            }
-                                        });
-
-                                    }
-
-                                    else {
-
-                                        clearAttendeeDetails();
-                                        toggleAmountField(0);
-
-                                        if (e.target.value=="community") {
-                                            createOrgField();
+                                (function () {
+                                    if (ticketTypeField!==undefined) {
+                                        if (ticketTypeField.value=="corporate") {
+                                            showAttendeeOptions("corporate");
+                                        } else {
+                                            showAttendeeOptions();
                                         }
+                                    }
+                                })();
 
-                                        createTShirtAndDietFields(-1);
-
+                                ticketTypeField.addEventListener('input', function (e) {
+                                    if (e.target.value=="corporate") {
+                                        showAttendeeOptions("corporate");
+                                    } else {
+                                        showAttendeeOptions(e.target.value);
                                     }
                                 });
+
+                                function showAttendeeOptions(ticketType) {
+                                    if (ticketType!==undefined) {
+
+                                        if (ticketType=="corporate") {
+
+                                            toggleAmountField(1);
+                                            clearAttendeeDetails();
+                                            resetField("num_of_ticket");
+
+                                            let amountField = document.getElementsByName('num_of_ticket')[0];
+
+                                            amountField.addEventListener('input', function (e) {
+                                                let num = parseInt(e.target.value);
+                                                let detailsSection = document.querySelector('div.section.details');
+
+                                                clearAttendeeDetails();
+
+                                                for (let c=0; c<num; ++c) {
+                                                    if (num==1) {
+                                                        createTShirtAndDietFields(-1);
+                                                    } else {
+                                                        createTShirtAndDietFields(c);
+                                                    }
+                                                }
+                                            });
+
+                                        }
+
+                                        else {
+                                            clearAttendeeDetails();
+                                            toggleAmountField(0);
+
+                                            if (ticketType=="community") {
+                                                createOrgField();
+                                            }
+
+                                            createTShirtAndDietFields(-1);
+                                        }
+
+                                    }
+                                }
 
                                 function resetField(fieldName) {
                                     let field = document.getElementsByName(fieldName)[0];
