@@ -29,13 +29,30 @@ function submitFormData() {
     let p3TShirtFields = document.getElementsByName('p3_tshirt'    );
     let orgFields      = document.getElementsByName('organization' );
 
-    if (firstName 
-        && lastName && gender && email && phone && city 
-        && country && speaking && ticketType && p1DietFields && p1TShirtFields 
-        && (orgFields ? orgFields[0].value : false)
-    ) {
+    let orgExists = ticketType=="community"
+        ? orgFields.length > 0
+            ? orgFields[0].value
+                ? true
+                : false
+            : false
+        : true;
 
-        event.preventDefault();
+    if (!orgExists) {
+        toggleEnterOrganizationMessage(1);
+    }
+
+    orgFields[0].addEventListener('input', function (e) {
+        if (e.target.value) {
+            toggleEnterOrganizationMessage(0);
+        } else {
+            toggleEnterOrganizationMessage(1);
+        }
+    })
+
+    event.preventDefault();
+
+    if (firstName && lastName && gender && email && phone && city && country 
+        && speaking && ticketType && p1DietFields && p1TShirtFields && orgExists) {
 
         let priceBeforeDiscount = ticketType=="individual"
             ? 20
@@ -114,5 +131,18 @@ function showCouponValidationMessage(isValid) {
         couponField.classList.add("error");
         couponField.value = "";
         couponField.placeholder = "Invalid coupon!";
+    }
+}
+
+
+
+
+
+function toggleEnterOrganizationMessage(showErrorMsg) {
+    let orgField = document.getElementsByName('organization')[0];
+    if (showErrorMsg) {
+        orgField.classList.add("error");
+    } else {
+        orgField.classList.remove("error");
     }
 }

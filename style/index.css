@@ -688,19 +688,23 @@ form select {
 	width: 250px;
 }
 
-form input[name="coupon"] {
+form input[name] {
 	border: 2px solid initial;
-	color: initial;
 }
 
-form input[name="coupon"].error {
+form input[name].error {
 	border-color: rgba(251, 122, 147, 1);
 	border-top: 2px solid rgba(251, 122, 147, 1);
 	border-left: 2px solid rgba(251, 122, 147, 1);
-	color: red;
 }
 
-form input[name="coupon"].success {
+form input[name].error:focus {
+	border-color: lightblue;
+	border-top: 2px solid lightblue;
+	border-left: 2px solid lightblue;
+}
+
+form input[name].success {
 	border-color: lightgreen;
 }
 
