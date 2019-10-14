@@ -41,14 +41,6 @@ function submitFormData() {
         toggleEnterOrganizationMessage(1);
     }
 
-    orgFields[0].addEventListener('input', function (e) {
-        if (e.target.value) {
-            toggleEnterOrganizationMessage(0);
-        } else {
-            toggleEnterOrganizationMessage(1);
-        }
-    })
-
     event.preventDefault();
 
     if (firstName && lastName && gender && email && phone && city && country 
