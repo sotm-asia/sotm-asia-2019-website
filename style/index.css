@@ -690,10 +690,14 @@ form select {
 
 form input[name="coupon"] {
 	border: 2px solid initial;
+	color: initial;
 }
 
 form input[name="coupon"].error {
-	border-color: rgb(251, 122, 147);
+	border-color: rgba(251, 122, 147, 1);
+	border-top: 2px solid rgba(251, 122, 147, 1);
+	border-left: 2px solid rgba(251, 122, 147, 1);
+	color: red;
 }
 
 form input[name="coupon"].success {
