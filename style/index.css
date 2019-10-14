@@ -703,3 +703,26 @@ form input[name="coupon"].error {
 form input[name="coupon"].success {
 	border-color: lightgreen;
 }
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*                        Registration success page                          */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+div#regSuccessMsg {
+	height: calc(100vh - 210px);
+}
+
+#regSuccessMsg span.text {
+	display: block;
+	text-align: center;
+	margin: auto;
+}
