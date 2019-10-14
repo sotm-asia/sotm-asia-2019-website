@@ -79,13 +79,13 @@ function submitFormData() {
             + "&" + "ticket_type="   + ticketType
             + "&" + "num_of_ticket=" + numTickets
             + "&" + "ticket_price="  + priceAfterDiscount
-            + "&" + "p2_diet="       + ( p1DietFields.length   > 1 ? p1DietFields[0].value   : "" )
-            + "&" + "p2_tshirt="     + ( p1TShirtFields.length > 1 ? p1TShirtFields[0].value : "" )
-            + "&" + "p2_diet="       + ( p2DietFields.length   > 1 ? p2DietFields[0].value   : "" )
-            + "&" + "p2_tshirt="     + ( p2TShirtFields.length > 1 ? p2TShirtFields[0].value : "" )
-            + "&" + "p3_diet="       + ( p3DietFields.length   > 1 ? p3DietFields[0].value   : "" )
-            + "&" + "p3_tshirt="     + ( p3TShirtFields.length > 1 ? p3TShirtFields[0].value : "" )
-            + "&" + "organization="  + ( orgFields.length      > 1 ? orgFields[0].value      : "" )
+            + "&" + "p2_diet="       + ( p1DietFields.length   > 0 ? p1DietFields[0].value   : "" )
+            + "&" + "p2_tshirt="     + ( p1TShirtFields.length > 0 ? p1TShirtFields[0].value : "" )
+            + "&" + "p2_diet="       + ( p2DietFields.length   > 0 ? p2DietFields[0].value   : "" )
+            + "&" + "p2_tshirt="     + ( p2TShirtFields.length > 0 ? p2TShirtFields[0].value : "" )
+            + "&" + "p3_diet="       + ( p3DietFields.length   > 0 ? p3DietFields[0].value   : "" )
+            + "&" + "p3_tshirt="     + ( p3TShirtFields.length > 0 ? p3TShirtFields[0].value : "" )
+            + "&" + "organization="  + ( orgFields.length      > 0 ? orgFields[0].value      : "" )
             + "&" + "coupon="        + coupon;
             
         let xHReq = new XMLHttpRequest();
