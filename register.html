@@ -106,17 +106,18 @@
                         <p class="block">
                             <span class="label">Speaking at conference?</span>
                             <select name="speaking" required>
+                                <option value="" disabled selected>Select answer</option>
                                 <option value="1">Yes</option>
                                 <option value="0">No</option>
                             </select>
                         </p>
                         <p class="block">
                             <span class="label">City:</span>
-                            <input type="text" name="city">
+                            <input type="text" name="city" required>
                         </p>
                         <p class="block">
                             <span class="label">Country:</span>
-                            <input type="text" name="country">
+                            <input type="text" name="country" required>
                         </p>
                         <p class="block">
                             <span class="label">Ticket type:</span>
@@ -298,13 +299,13 @@
                     <div class="section coupon">
                         <p class="block">
                             <span class="label">Have a coupon?</span>
-                            <input type="text" name="coupon" required>
+                            <input type="text" name="coupon">
                         </p>
                     </div>
 
                     <div class="section">
                         <p class="block">
-                            <button class="button full-btn" type="submit" onclick="event.preventDefault(); submitFormData()">Proceed to payment</button>
+                            <button class="button full-btn" type="submit" onclick="submitFormData()">Proceed to payment</button>
                         </p>
                     </div>
 
