@@ -144,11 +144,13 @@
                         <script type="text/javascript">
                             {
                                 let dietOptionsHTML = `
+                                    <option value="" disabled selected>Select preference</option>
                                     <option value="veg">Vegetarian</option>
                                     <option value="nonveg">Non-vegetarian</option>
                                 `;
 
                                 let tShirtOptionsHTML = `
+                                    <option value="" disabled selected>Select size</option>
                                     <option value="XS">XS</option>
                                     <option value="S">S</option>
                                     <option value="M">M</option>
@@ -251,6 +253,7 @@
 
                                     let input = document.createElement('input');
                                     input.type = "text";
+                                    input.required = "required";
                                     input.name = "organization";
 
                                     block.appendChild(inputLabel);
@@ -284,6 +287,7 @@
 
                                     let select = document.createElement('select');
                                     select.name = "p" + (index==-1?1:index+1) + "_diet";
+                                    select.required = "required";
                                     select.innerHTML = dietOptionsHTML;
 
                                     block.appendChild(inputLabel);
@@ -300,6 +304,7 @@
 
                                     select = document.createElement('select');
                                     select.name = "p" + (index==-1?1:index+1) + "_tshirt";
+                                    select.required = "required";
                                     select.innerHTML = tShirtOptionsHTML;
 
                                     block.appendChild(inputLabel);
