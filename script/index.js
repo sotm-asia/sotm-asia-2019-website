@@ -7,6 +7,7 @@
 //
 function submitFormData() {
     let url = "https://script.google.com/macros/s/AKfycbzB2-Xue2sbiBfx8ANUNGmfe_4FmBxz5hxCP1Q2fyejFuMVCe0/exec";
+    let redirectURL = "http://sandbox.sslcommerz.com/gwprocess/v4/gw.php";
     let form = document.getElementById('form').querySelector('form');
 
     let firstName      = document.getElementsByName('first_name'   )[0].value;
@@ -29,20 +30,18 @@ function submitFormData() {
     let orgFields      = document.getElementsByName('organization' );
 
     let priceBeforeDiscount = ticketType=="individual"
-        ? (numTickets * 20)
+        ? 20
         : ticketType=="community"
-            ? (numTickets * 40)
+            ? 40
             : ticketType=="corporate"
-                ? (numTickets * 200)
-                : 0;
+                ? 200
+                : -1;
 
-    let priceAfterDiscount = ticketType=="individual"
-        ? (priceBeforeDiscount * 15)
-        : ticketType=="community"
-            ? (priceBeforeDiscount * 10)
-            : ticketType=="corporate"
-                ? (priceBeforeDiscount * 5)
-                : 0;
+    let priceAfterDiscount = coupon[coupon.length-1]==="0"
+        ? priceBeforeDiscount * 0.5
+        : coupon[coupon.length-1]==="1"
+            ? priceBeforeDiscount * 0
+            : priceBeforeDiscount;
 
     let data = "first_name="     + firstName
         + "&" + "last_name="     + lastName
@@ -69,7 +68,9 @@ function submitFormData() {
     xHReq.onreadystatechange = function () {
         if (this.readyState==4 && this.status==200) {
             let response = JSON.parse(xHReq.response);
-            location.href = "http://sandbox.sslcommerz.com/gwprocess/v4/gw.php?Q=PAY&SESSIONKEY=" + response.sessionkey;
+            location.href = redirectURL 
+                + "?" + "Q=PAY" 
+                + "&" + "SESSIONKEY=" + response.sessionkey;
         }
     }
 
