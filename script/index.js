@@ -29,6 +29,15 @@ function submitFormData() {
     let p3TShirtFields = document.getElementsByName('p3_tshirt'    );
     let orgFields      = document.getElementsByName('organization' );
 
+    let emailValid = email.split("@").length==2
+        ? email.split("@")[0] && email.split("@")[1]
+            ? email.split("@")[1].split(".").length==2
+                ? email.split("@")[1].split(".")[0] 
+                    && email.split("@")[1].split(".")[1]
+                : false
+            : false
+        : false;
+
     let orgExists = ticketType=="community"
         ? orgFields.length > 0
             ? orgFields[0].value
@@ -37,13 +46,17 @@ function submitFormData() {
             : false
         : true;
 
+    if (!emailValid) {
+        showInputErrorMessage("email", 1);
+    }
+
     if (!orgExists) {
-        toggleEnterOrganizationMessage(1);
+        showInputErrorMessage("organization", 1);
     }
 
     event.preventDefault();
 
-    if (firstName && lastName && gender && email && phone && city && country 
+    if (firstName && lastName && gender && emailValid && phone && city && country 
         && speaking && ticketType && p1DietFields && p1TShirtFields && orgExists) {
 
         let priceBeforeDiscount = ticketType=="individual"
@@ -130,8 +143,8 @@ function showCouponValidationMessage(isValid) {
 
 
 
-function toggleEnterOrganizationMessage(showErrorMsg) {
-    let orgField = document.getElementsByName('organization')[0];
+function showInputErrorMessage(fieldName, showErrorMsg) {
+    let orgField = document.getElementsByName(fieldName)[0];
     if (showErrorMsg) {
         orgField.classList.add("error");
     } else {
