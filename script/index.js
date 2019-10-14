@@ -29,7 +29,11 @@ function submitFormData() {
     let p3TShirtFields = document.getElementsByName('p3_tshirt'    );
     let orgFields      = document.getElementsByName('organization' );
 
-    if (firstName && lastName && gender && email && phone && city && country && speaking && ticketType && p1DietFields && p1TShirtFields) {
+    if (firstName 
+        && lastName && gender && email && phone && city 
+        && country && speaking && ticketType && p1DietFields && p1TShirtFields 
+        && (orgFields ? orgFields[0].value : false)
+    ) {
 
         event.preventDefault();
 
