@@ -36,6 +36,7 @@ a.btn:not([href]):not([tabindex]):hover {
 	--logo-color-1a: rgba(38, 34, 98, 1);
 	--logo-color-1b: rgba(85, 83, 130, 1);
 	--logo-color-1c: rgba(134, 132, 165, 1);
+	--logo-color-1d: rgba(134, 132, 165, 0.5);
 	--logo-color-2a: rgba(5, 104, 57, 1);
 	--logo-color-3a: rgba(191, 30, 45, 1);
 	--logo-color-3c: rgba(230, 105, 117, 1);
@@ -471,11 +472,31 @@ div#schedule.row {
 	text-align: center;
 	min-width: 450px;
 }
-#schedule span {
-	border: 1px solid var(--logo-color-1b);
-	font-size: 1.5rem;
-	padding: 40px 50px;
-	border-radius: 30px;
+#schedule table {
+	width: 100%;
+	border-spacing: 3px;
+	border-collapse: separate;
+}
+#schedule td {
+	padding: 5px;
+	padding-top: 10px;
+}
+#schedule td {
+	background-color: var(--logo-color-1d);
+}
+#schedule td:hover {
+	cursor: default;
+	background-color: var(--logo-color-3c);
+}
+#schedule th {
+	font-size: 1.1em;
+	padding: 8px;
+	padding-top: 16px;
+	background-color: var(--logo-color-1b);
+	color: #fff;
+}
+#schedule tr:hover > td:nth-of-type(1) {
+	background-color: var(--logo-color-3c);
 }
 
 
