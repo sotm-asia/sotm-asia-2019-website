@@ -6,7 +6,7 @@
 
 //
 function submitFormData() {
-    let url = "https://script.google.com/macros/s/AKfycbzB2-Xue2sbiBfx8ANUNGmfe_4FmBxz5hxCP1Q2fyejFuMVCe0/exec";
+    let url = "https://script.google.com/macros/s/AKfycbxFXi4TlZle0J6H1U3bmBdYlrhNJ0YY47ehPi3pLztWuPi5LQ/exec";
     let redirectURL = "http://sandbox.sslcommerz.com/gwprocess/v4/gw.php";
     let form = document.getElementById('form').querySelector('form');
 
