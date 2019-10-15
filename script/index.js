@@ -7,7 +7,7 @@
 //
 function submitFormData() {
     let url = "https://script.google.com/macros/s/AKfycbxFXi4TlZle0J6H1U3bmBdYlrhNJ0YY47ehPi3pLztWuPi5LQ/exec";
-    let redirectURL = "http://sandbox.sslcommerz.com/gwprocess/v4/gw.php";
+    let redirectURL = "https://securepay.sslcommerz.com/gwprocess/v4/gw.php";
     let form = document.getElementById('form').querySelector('form');
 
     let firstName      = document.getElementsByName('first_name'   )[0].value;
