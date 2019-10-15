@@ -725,8 +725,16 @@ div#regSuccessMsg {
 	height: calc(100vh - 210px);
 }
 
+#regSuccessMsg > div.cont {
+	width: 100%;
+	padding: 100px 0;
+}
+
 #regSuccessMsg span.text {
 	display: block;
 	text-align: center;
-	margin: auto;
+}
+
+#regSuccessMsg span.text.title {
+	font-size: 30px;
 }
