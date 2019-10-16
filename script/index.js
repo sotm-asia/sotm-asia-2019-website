@@ -60,9 +60,9 @@ function submitFormData() {
         && speaking && ticketType && p1DietFields && p1TShirtFields && orgExists) {
 
         let priceBeforeDiscount = ticketType=="individual"
-            ? 20
+            ? 40
             : ticketType=="community"
-                ? 40
+                ? 20
                 : ticketType=="corporate"
                     ? 200
                     : -1;
