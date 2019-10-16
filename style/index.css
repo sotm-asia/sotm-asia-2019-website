@@ -367,10 +367,14 @@ div#firstScreen.row {
 #firstScreen .affiliation {
 	margin: 40px 0px 0px 0px;
 }
+#firstScreen .affiliation > div.cont {
+	display: inline-block;
+	margin-bottom: 20px;
+	width: 210px;
+}
 #firstScreen .affiliation img.logo {
-	margin: 10px 20px;
-	float: left;
-	height: 90px;
+	max-width: 200px;
+	vertical-align: middle;
 }
 #firstScreen .affiliation img.logo:hover {
 	transform: scale(1.2);
