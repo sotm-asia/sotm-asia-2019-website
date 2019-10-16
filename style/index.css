@@ -95,8 +95,9 @@ h5 {
 
 
 
+#sponsors h3,
 #lastYear h3,
-#sponsor h3,
+#becomeSponsor h3,
 #venue h3,
 #venueDescription h3,
 #getToDhaka h3,
@@ -108,16 +109,6 @@ h5 {
 	background-color: var(--logo-color-1c);
 	border-left-color: var(--logo-color-1a);
 	border-left-style: solid;
-}
-#lastYear h3,
-#sponsor h3,
-#venue h3,
-#venueDescription h3,
-#getToDhaka h3,
-#accommodation h3,
-#visa h3,
-#programDescription h3,
-#codeOfConduct h3 {
 	border-left-width: 10px;
 	padding: 5px 10px;
 	padding-top: 10px;
@@ -367,10 +358,14 @@ div#firstScreen.row {
 #firstScreen .affiliation {
 	margin: 40px 0px 0px 0px;
 }
+#firstScreen .affiliation > div.cont {
+	display: inline-block;
+	margin-bottom: 20px;
+	width: 210px;
+}
 #firstScreen .affiliation img.logo {
-	margin: 10px 20px;
-	float: left;
-	height: 90px;
+	max-width: 200px;
+	vertical-align: middle;
 }
 #firstScreen .affiliation img.logo:hover {
 	transform: scale(1.2);
@@ -405,6 +400,30 @@ div#comingSoon {
 
 #TweetUpdate {
 	border: 1px solid #1da1f2;
+}
+
+
+
+
+
+#sponsors div.box {
+	margin: 10px 15px;
+}
+
+#sponsors div.box span.text.title {
+	position: absolute;
+	background-color: #fff;
+	padding: 5px 10px;
+	margin-top: -7px;
+	margin-left: 15px;
+	font-weight: 700;
+}
+
+#sponsors img.logo {
+	border: 1px solid #aaa;
+	padding: 20px;
+	margin: 5px;
+	width: 230px;
 }
 
 
@@ -449,23 +468,23 @@ div.image-fit {
 
 
 
-#sponsor .col-sm-6 {
+#becomeSponsor .col-sm-6 {
 	padding: 10px 40px;
 }
-#sponsor table {
+#becomeSponsor table {
 	display: block;
 }
-#sponsor table td.header {
+#becomeSponsor table td.header {
 	border-bottom: 1px solid var(--sponsor-header-color);
 	color: var(--sponsor-header-color);
 }
-#sponsor table.left {
+#becomeSponsor table.left {
 	float: right;
 }
-#sponsor table.left td {
+#becomeSponsor table.left td {
 	text-align: right;
 }
-#sponsor img.logo {
+#becomeSponsor img.logo {
 	margin: 0px 20px;
 	height: 70px;
 }
