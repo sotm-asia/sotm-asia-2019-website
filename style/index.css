@@ -406,8 +406,13 @@ div#comingSoon {
 
 
 
+#sponsors div.cont {
+	text-align: center;
+}
+
 #sponsors div.box {
 	margin: 10px 15px;
+	display: inline-block;
 }
 
 #sponsors div.box span.text.title {
