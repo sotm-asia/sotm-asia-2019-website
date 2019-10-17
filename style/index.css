@@ -410,6 +410,10 @@ div#comingSoon {
 	text-align: center;
 }
 
+#sponsors > div.cont {
+	text-align: left;
+}
+
 #sponsors div.box {
 	margin: 10px 15px;
 	display: inline-block;
