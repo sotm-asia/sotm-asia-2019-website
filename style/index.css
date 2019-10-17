@@ -414,6 +414,12 @@ div#comingSoon {
 	text-align: left;
 }
 
+@media (max-width: 768px) {
+	#sponsors > div.cont:nth-child(2) {
+		margin-top: 70px;
+	}
+}
+
 #sponsors div.box {
 	margin: 10px 15px;
 	display: inline-block;
