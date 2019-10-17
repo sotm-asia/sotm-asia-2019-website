@@ -149,7 +149,6 @@ div.row:not(#header) {
 }
 a.button {
 	border-radius: 10px;
-	/*border: 1px solid var(--footer-text-color);*/
 	padding: 10px;
 	line-height: 3em;
 }
@@ -238,6 +237,8 @@ div#header.row {
 	background-color: var(--logo-color-1b);
 }
 #footer div.row {
+	display: flex;
+	align-items: center;
 	margin: 0px 0px 0px 0px;
 	padding: 0px;
 }
