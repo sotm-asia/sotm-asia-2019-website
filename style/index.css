@@ -746,6 +746,19 @@ form input[name].success {
 
 
 
+div#disclaimer.row {
+	margin-top: -50px;
+}
+
+#disclaimer p {
+	width: 100%;
+	text-align: center;
+}
+
+
+
+
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
