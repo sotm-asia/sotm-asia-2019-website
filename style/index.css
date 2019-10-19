@@ -439,7 +439,19 @@ div#comingSoon {
 	border: 1px solid #aaa;
 	padding: 20px;
 	margin: 5px;
-	width: 230px;
+}
+
+#sponsors .silver img.logo {
+	width: 280px;
+}
+
+#sponsors .bronze img.logo {
+	width: 240px;
+}
+
+#sponsors .supporter img.logo,
+#sponsors .media img.logo {
+	width: 200px;
 }
 
 
