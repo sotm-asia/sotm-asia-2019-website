@@ -120,31 +120,299 @@
                         <p class="block">
                             <span class="label">Country:</span>
                             <input type="text" name="country" required>
-                        </p>
-                        <p class="block">
-                            <span class="label">Ticket type:</span>
-                            <select name="ticket_type" required>
-                                <option value="" disabled selected>Select type</option>
-                                <option value="individual">Individual ($40)</option>
-                                <option value="community">Community ($20)</option>
-                                <option value="corporate">Corporate ($200)</option>
-                            </select>
-                        </p>
-                    </div>
+                            <script type="text/javascript">
+                                {                                
+                                    let countryField = document.getElementsByName('country')[0];
+                                    let countryContainer = countryField.closest('p.block');
 
-                    <div class="section amount">
-                        <p class="block hidden">
-                            <span class="label">Number of attendees:</span>
-                            <select name="num_of_ticket">
-                                <option value="" disabled selected>Select number</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </p>
+                                    let countryList = [
+                                        "Abkhazia",
+                                        "Afghanistan",
+                                        "Albania",
+                                        "Algeria",
+                                        "Andorra",
+                                        "Angola",
+                                        "Antigua and Barbuda",
+                                        "Armenia",
+                                        "Artsakh",
+                                        "Artsakh",
+                                        "Australia",
+                                        "Austria",
+                                        "Azerbaijan",
+                                        "Bahamas",
+                                        "Bahrain",
+                                        "Bangladesh",
+                                        "Barbados",
+                                        "Belarus",
+                                        "Belgium",
+                                        "Belize",
+                                        "Benin",
+                                        "Bhutan",
+                                        "Bolivia",
+                                        "Bosnia and Herzegovina",
+                                        "Botswana",
+                                        "Brazil",
+                                        "Brunei",
+                                        "Bulgaria",
+                                        "Burkina Faso",
+                                        "Burundi",
+                                        "Cambodia",
+                                        "Cameroon",
+                                        "Central African Republic",
+                                        "Chad",
+                                        "Chile",
+                                        "Colombia",
+                                        "Comoros",
+                                        "Congo",
+                                        "Cook Islands",
+                                        "Cook Islands",
+                                        "Costa Rica",
+                                        "Croatia",
+                                        "Cuba",
+                                        "Cyprus",
+                                        "Denmark",
+                                        "Djibouti",
+                                        "Dominica",
+                                        "Dominican Republic",
+                                        "East Timor",
+                                        "Ecuador",
+                                        "Egypt",
+                                        "El Salvador",
+                                        "Equatorial Guinea",
+                                        "Eritrea",
+                                        "Estonia",
+                                        "Eswatini",
+                                        "Ethiopia",
+                                        "Federated States of Micronesia ",
+                                        "Fiji",
+                                        "Finland",
+                                        "France",
+                                        "Gabon",
+                                        "Gambia",
+                                        "Georgia",
+                                        "Germany",
+                                        "Ghana",
+                                        "Greece",
+                                        "Grenada",
+                                        "Guatemala",
+                                        "Guinea-Bissau",
+                                        "Guyana",
+                                        "Haiti",
+                                        "Honduras",
+                                        "Hungary",
+                                        "India",
+                                        "Indonesia",
+                                        "Iran",
+                                        "Iraq",
+                                        "Israel",
+                                        "Italy",
+                                        "Ivory Coast",
+                                        "Jamaica",
+                                        "Japan",
+                                        "Jordan",
+                                        "Kazakhstan",
+                                        "Kenya",
+                                        "Kiribati",
+                                        "Kosovo",
+                                        "Kosovo",
+                                        "Kuwait",
+                                        "Kyrgyzstan",
+                                        "Laos",
+                                        "Latvia",
+                                        "Lebanon",
+                                        "Lesotho",
+                                        "Liberia",
+                                        "Libya",
+                                        "Liechtenstein",
+                                        "Lithuania",
+                                        "Luxembourg",
+                                        "Madagascar",
+                                        "Malawi",
+                                        "Malaysia",
+                                        "Maldives",
+                                        "Mali",
+                                        "Malta",
+                                        "Marshall Islands",
+                                        "Mauritania",
+                                        "Mauritius",
+                                        "Mexico",
+                                        "Moldova",
+                                        "Monaco",
+                                        "Mongolia",
+                                        "Montenegro",
+                                        "Morocco",
+                                        "Mozambique",
+                                        "Myanmar",
+                                        "Namibia",
+                                        "Nauru",
+                                        "Nepal",
+                                        "Netherlands",
+                                        "New Zealand",
+                                        "Nicaragua",
+                                        "Niger",
+                                        "Nigeria",
+                                        "Niue",
+                                        "Niue",
+                                        "North Korea",
+                                        "North Macedonia",
+                                        "Northern Cyprus",
+                                        "Northern Cyprus",
+                                        "Norway",
+                                        "Oman",
+                                        "Pakistan",
+                                        "Palau",
+                                        "Palestine",
+                                        "Panama",
+                                        "Papua New Guinea",
+                                        "Paraguay",
+                                        "Peru",
+                                        "Philippines",
+                                        "Poland",
+                                        "Portugal",
+                                        "Qatar",
+                                        "Republic of the Congo",
+                                        "Romania",
+                                        "Russia",
+                                        "Rwanda",
+                                        "Sahrawi Arab Democratic Republic",
+                                        "Sahrawi Arab Democratic Republic",
+                                        "Saint Kitts and Nevis",
+                                        "Saint Lucia",
+                                        "Saint Vincent and the Grenadines",
+                                        "Samoa",
+                                        "San Marino",
+                                        "Saudi Arabia",
+                                        "Senegal",
+                                        "Serbia",
+                                        "Seychelles",
+                                        "Sierra Leone",
+                                        "Singapore",
+                                        "Slovakia",
+                                        "Slovenia",
+                                        "Solomon Islands",
+                                        "Somalia",
+                                        "Somaliland",
+                                        "Somaliland",
+                                        "South Africa",
+                                        "South Korea",
+                                        "South Ossetia",
+                                        "South Ossetia",
+                                        "South Sudan",
+                                        "South Sudan",
+                                        "Spain",
+                                        "Sudan",
+                                        "Suriname",
+                                        "Sweden",
+                                        "Switzerland",
+                                        "Syria",
+                                        "São Tomé and Príncipe",
+                                        "Taiwan",
+                                        "Taiwan",
+                                        "Tajikistan",
+                                        "Tanzania",
+                                        "Thailand",
+                                        "Togo",
+                                        "Tonga",
+                                        "Transnistria",
+                                        "Transnistria",
+                                        "Transnistria",
+                                        "Trinidad and Tobago",
+                                        "Tunisia",
+                                        "Turkey",
+                                        "Turkmenistan",
+                                        "Tuvalu",
+                                        "Uganda",
+                                        "Ukraine",
+                                        "United Arab Emirates",
+                                        "United Kingdom",
+                                        "United States",
+                                        "Uruguay",
+                                        "Uzbekistan",
+                                        "Vanuatu",
+                                        "Vatican City",
+                                        "Vatican City",
+                                        "Venezuela",
+                                        "Vietnam",
+                                        "Yemen",
+                                        "Zambia",
+                                        "Zimbabwe"
+                                    ];
 
+                                    let data = {
+                                        "name": "country",
+                                        "values": countryList.map(function (country) {
+                                            return country.toLowerCase();
+                                        }),
+                                        "texts": countryList,
+                                        "defaultText": "Select country",
+                                        "extras": {
+                                            "required": true,
+                                        }
+                                    };
+                                    let dropdown = createSelectTag(data);
+
+                                    countryField.remove();
+                                    countryContainer.appendChild(dropdown);
+                                }
+
+                            </script>
+                        </p>
                         <script type="text/javascript">
                             {
+                                let data = {
+                                    "name": "ticket_type",
+                                    "values": [
+                                        "individual",
+                                        "corporate",
+                                    ],
+                                    "texts": [
+                                        "Individual ($40)",
+                                        "Corporate ($200)",
+                                    ],
+                                    "defaultText": "Select ticket type",
+                                    "extras": {
+                                        "required": true,
+                                    }
+                                };
+
+                                let countryField = document.getElementsByName('country')[0];
+
+                                countryField.addEventListener('input', function (e) {
+
+                                    removeTicketTypeField();
+                                    clearAttendeeDetails();
+
+                                    if (e.target.value=="bangladesh") {
+                                        data.values.splice(0, 0, "community");
+                                        data.texts.splice(0, 0, "Local community & students ($20)");
+                                    } else {
+                                        if (data.values.length==3) {
+                                            data.values.splice(0, 1);
+                                        }
+                                        if (data.texts.length==3) {
+                                            data.texts.splice(0, 1);
+                                        }
+                                    }
+
+                                    let ticketTypeField = createSelectTag(data);
+
+                                    let block = createFormBlock();
+                                    block.appendChild(createFormLabel("Ticket type:"));
+                                    block.appendChild(ticketTypeField);
+
+                                    let generalSection = document.querySelector('.section.general');
+                                    generalSection.appendChild(block);
+
+                                    ticketTypeField.addEventListener('input', function (e) {
+                                        if (e.target.value=="corporate") {
+                                            showAttendeeOptions("corporate");
+                                        } else {
+                                            showAttendeeOptions(e.target.value);
+                                        }
+                                    });
+
+                                });
+
                                 let dietOptionsHTML = `
                                     <option value="veg">Vegetarian</option>
                                     <option value="nonveg">Non-vegetarian</option>
@@ -158,26 +426,6 @@
                                     <option value="XL">XL</option>
                                     <option value="XXL">XXL</option>
                                 `;
-
-                                let ticketTypeField = document.getElementsByName('ticket_type')[0];
-
-                                (function () {
-                                    if (ticketTypeField!==undefined) {
-                                        if (ticketTypeField.value=="corporate") {
-                                            showAttendeeOptions("corporate");
-                                        } else {
-                                            showAttendeeOptions();
-                                        }
-                                    }
-                                })();
-
-                                ticketTypeField.addEventListener('input', function (e) {
-                                    if (e.target.value=="corporate") {
-                                        showAttendeeOptions("corporate");
-                                    } else {
-                                        showAttendeeOptions(e.target.value);
-                                    }
-                                });
 
                                 function showAttendeeOptions(ticketType) {
                                     if (ticketType!==undefined) {
@@ -316,9 +564,29 @@
                                     boxCont.appendChild(box);
                                     detailsSection.appendChild(boxCont);
                                 }
+
+                                function removeTicketTypeField() {
+                                    let typeField = document.getElementsByName('ticket_type')[0];
+                                    if (typeField) {
+                                        typeContBlock = typeField.closest('p.block');
+                                        typeContBlock.remove();
+                                    }
+                                }
+
                             }
                         </script>
+                    </div>
 
+                    <div class="section amount">
+                        <p class="block hidden">
+                            <span class="label">Number of attendees:</span>
+                            <select name="num_of_ticket">
+                                <option value="" disabled selected>Select number</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </p>
                     </div>
 
                     <div class="section details"></div>
