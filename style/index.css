@@ -454,6 +454,11 @@ div#comingSoon {
 	width: 200px;
 }
 
+#sponsors img.logo.resize-h[src*='emk'] {
+	height: 180px;
+	width: auto;
+}
+
 
 
 
