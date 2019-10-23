@@ -151,3 +151,89 @@ function showInputErrorMessage(fieldName, showErrorMsg) {
         orgField.classList.remove("error");
     }
 }
+
+
+
+
+
+function createSelectTag({name, values, texts, defaultText, extras}) {
+    if (name && values && values.length>0) {
+
+        let dropdown = document.createElement('select');
+        dropdown.name = name;
+
+        if (defaultText) {
+            let data = {
+                "value": null,
+                "text": defaultText,
+                "extras": {
+                    "selected": true,
+                    "disabled": true,
+                },
+            };
+            dropdown.appendChild( addOptionTag(data) );
+        }
+        
+        if (values.length>0) {
+            for (let c=0; c<values.length; ++c) {
+                let data = {
+                    "value": values[c],
+                    "text": texts[c],
+                };
+                dropdown.appendChild( addOptionTag(data) );
+            }
+        }
+
+        if (extras) {
+            if (extras.required) {
+                dropdown.required = true;
+            }
+        }
+
+        return dropdown;
+
+    }
+}
+
+
+
+
+
+function addOptionTag({value, text, extras}) {
+    let option = document.createElement('option');
+
+    option.value     = value || "";
+    option.innerText = text  || "";
+
+    if (extras) {
+        if (extras.selected) {
+            option.selected = true;
+        }
+        if (extras.disabled) {
+            option.disabled = true;
+        }
+    }
+
+    return option;
+}
+
+
+
+
+
+function createFormBlock() {
+    let block = document.createElement('p');
+    block.classList.add('block');
+    return block;
+}
+
+
+
+
+
+function createFormLabel(labelText) {
+    let label = document.createElement('span');
+    label.classList.add('label');
+    label.innerText = labelText;
+    return label;
+}
