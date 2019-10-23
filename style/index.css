@@ -459,6 +459,11 @@ div#comingSoon {
 	width: auto;
 }
 
+#sponsors img.logo.resize-w[src*='eutech'] {
+	height: auto;
+	width: 140px;
+}
+
 
 
 
