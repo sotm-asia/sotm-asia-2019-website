@@ -104,6 +104,7 @@ h5 {
 #accommodation h3,
 #visa h3,
 #programDescription h3,
+#regInstruction h3,
 #codeOfConduct h3,
 #boxes .box {
 	background-color: var(--logo-color-1c);
@@ -698,6 +699,10 @@ div.map.overlay {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+
+#regInstruction {
+	margin-bottom: 100px;
+}
 
 #form form {
 	max-width: 550px;
