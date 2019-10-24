@@ -723,6 +723,13 @@ form span.label {
 	width: 230px;
 }
 
+form span.label.required::after {
+	color: rgba(210, 16, 16, 1);
+	content: '*';
+	display: inline-block;
+	padding-left: 2px;
+}
+
 form div.cont {
 	text-align: center;
 }
@@ -768,6 +775,15 @@ form input[name].error:focus {
 
 form input[name].success {
 	border-color: lightgreen;
+}
+
+form p.footnote {
+	font-size: 0.8rem;
+	text-align: right;
+}
+
+form p.footnote.mandatory {
+	color: rgba(210, 16, 16, 1);
 }
 
 

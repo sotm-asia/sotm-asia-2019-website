@@ -231,9 +231,13 @@ function createFormBlock() {
 
 
 
-function createFormLabel(labelText) {
+function createFormLabel(labelData) {
     let label = document.createElement('span');
-    label.classList.add('label');
-    label.innerText = labelText;
+    label.innerText = labelData.labelText;
+    if (labelData.classList) {
+        for (let c=0; c<labelData.classList.length; ++c) {
+            label.classList.add(labelData.classList[c]);
+        }
+    }
     return label;
 }
