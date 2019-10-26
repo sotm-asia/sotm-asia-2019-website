@@ -312,6 +312,53 @@ span#img404Cap {
 
 
 
+div#landingImage.row {
+	margin-top: 0;
+	padding: 0;
+}
+
+#landingImage > a {
+	width: 100%;
+}
+
+#landingImage > a:hover {
+	opacity: 0.9;
+}
+
+#landingImage div.image {
+	background-image: url('../image/landing.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@media (min-width: 576px) {
+	#landingImage div.image {
+		min-height: 300px;
+	}
+}
+
+@media (min-width: 768px) {
+	#landingImage div.image {
+		min-height: 401px;
+	}
+}
+
+@media (min-width: 992px) {
+	#landingImage div.image {
+		min-height: 517px;
+	}
+}
+
+@media (min-width: 1200px) {
+	#landingImage div.image {
+		min-height: 626px;
+	}
+}
+
+
+
+
 div#firstScreen.row {
 	margin-top: 70px;
 }
