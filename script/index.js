@@ -7,7 +7,10 @@
 //
 function submitFormData() {
     let url = "https://script.google.com/macros/s/AKfycbxFXi4TlZle0J6H1U3bmBdYlrhNJ0YY47ehPi3pLztWuPi5LQ/exec";
+
     let redirectURL = "https://securepay.sslcommerz.com/gwprocess/v4/gw.php";
+    let successURL  = "https://stateofthemap.asia/registration-successful.html";
+
     let form = document.getElementById('form').querySelector('form');
 
     let firstName      = document.getElementsByName('first_name'   )[0].value;
@@ -98,10 +101,12 @@ function submitFormData() {
         xHReq.onreadystatechange = function () {
             if (this.readyState==4 && this.status==200) {
                 let response = JSON.parse(xHReq.response);
-                if (response.status=="success") {
-                    location.href = redirectURL 
-                        + "?" + "Q=PAY" 
-                        + "&" + "SESSIONKEY=" + response.sessionkey;
+                if (response.status=="success") {;
+                    location.href = priceAfterDiscount==0
+                        ? successURL
+                        : (redirectURL 
+                            + "?" + "Q=PAY" 
+                            + "&" + "SESSIONKEY=" + response.sessionkey);
                 } else {
                     let isValid = response.status=="success";
                     showCouponValidationMessage(isValid);
