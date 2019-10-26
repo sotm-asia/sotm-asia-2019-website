@@ -332,7 +332,7 @@ div#landingImage.row {
 	background-repeat: no-repeat;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 767px) {
 	#landingImage div.image {
 		min-height: 300px;
 	}
