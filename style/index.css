@@ -325,35 +325,9 @@ div#landingImage.row {
 	opacity: 0.9;
 }
 
-#landingImage div.image {
-	background-image: url('../image/landing.png');
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-@media (max-width: 767px) {
-	#landingImage div.image {
-		min-height: 300px;
-	}
-}
-
-@media (min-width: 768px) {
-	#landingImage div.image {
-		min-height: 401px;
-	}
-}
-
-@media (min-width: 992px) {
-	#landingImage div.image {
-		min-height: 517px;
-	}
-}
-
-@media (min-width: 1200px) {
-	#landingImage div.image {
-		min-height: 626px;
-	}
+#landingImage img {
+	margin-top: -50px;
+	width: 100%;
 }
 
 
