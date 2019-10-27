@@ -136,9 +136,6 @@ div.image-fit {
 button {
 	text-align: center;
 }
-div.info {
-	padding: 30px;
-}
 img.icon {
 	height: 30px;
 	width: 30px;
@@ -308,6 +305,9 @@ span#img404Cap {
 #venue .image-fit {
 	background-image: url('../image/venue.png');
 }
+#venue div.info {
+	padding: 30px;
+}
 
 
 
@@ -325,35 +325,9 @@ div#landingImage.row {
 	opacity: 0.9;
 }
 
-#landingImage div.image {
-	background-image: url('../image/landing.png');
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-@media (max-width: 767px) {
-	#landingImage div.image {
-		min-height: 300px;
-	}
-}
-
-@media (min-width: 768px) {
-	#landingImage div.image {
-		min-height: 401px;
-	}
-}
-
-@media (min-width: 992px) {
-	#landingImage div.image {
-		min-height: 517px;
-	}
-}
-
-@media (min-width: 1200px) {
-	#landingImage div.image {
-		min-height: 626px;
-	}
+#landingImage img {
+	margin-top: -50px;
+	width: 100%;
 }
 
 
@@ -362,12 +336,19 @@ div#landingImage.row {
 div#firstScreen.row {
 	margin-top: 70px;
 }
-#firstScreen .img-cont {
-	text-align: center;
+
+@media (max-width: 992px) {
+	#firstScreen .info {
+		margin-bottom: 50px;
+	}
 }
-#firstScreen .mid > div {
-	padding: 0 40px;
+
+@media (min-width: 992px) {
+	#firstScreen .info > div {
+		padding-right: 60px;
+	}
 }
+
 #bigLogo img.logo {
 	background-color: #fff;
 	border-radius: 50%;
@@ -384,15 +365,6 @@ div#firstScreen.row {
 		font-size: 16px;
 	}
 }
-#firstScreen img.img-fluid.logo {
-	margin-bottom: 20px;
-}
-#firstScreen h3 {
-	margin: 0 0 50px 0;
-	font-weight: 600;
-	text-align: center;
-	color: var(--logo-color-1a);
-}
 #firstScreen p {
 	font-size: 1.4rem;
 }
@@ -401,16 +373,13 @@ div#firstScreen.row {
 		font-size: 1.2rem;
 	}
 }
-#firstScreen div.col-sm-4 {
-	text-align: center;
-}
 #firstScreen .affiliation {
 	margin: 40px 0px 0px 0px;
 }
 #firstScreen .affiliation > div.cont {
 	display: inline-block;
 	margin-bottom: 20px;
-	width: 210px;
+	width: 250px;
 }
 #firstScreen .affiliation img.logo {
 	max-width: 200px;
@@ -451,6 +420,10 @@ div#comingSoon {
 	border: 1px solid #1da1f2;
 }
 
+#TweetUpdate iframe {
+	min-height: 350px !important;
+}
+
 
 
 
@@ -463,7 +436,7 @@ div#comingSoon {
 	text-align: left;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
 	#sponsors > div.cont:nth-child(2) {
 		margin-top: 70px;
 	}
