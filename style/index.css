@@ -337,7 +337,7 @@ div#firstScreen.row {
 	margin-top: 70px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
 	#firstScreen .info {
 		margin-bottom: 50px;
 	}
@@ -418,6 +418,10 @@ div#comingSoon {
 
 #TweetUpdate {
 	border: 1px solid #1da1f2;
+}
+
+#TweetUpdate iframe {
+	min-height: 350px !important;
 }
 
 
