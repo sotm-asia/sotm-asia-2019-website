@@ -85,161 +85,487 @@
 
 
         <div id="schedule" class="row">
-            <table>
-                <tr>
-                    <th>Time</th>
-                    <th>AudiMain-1000</th>
-                    <th>TR30</th>
-                    <th>TR45</th>
-                    <th>TR60</th>
-                    <th>Audi3D-350</th>
-                    <th>Remark</th>
-                </tr>
-                <tr>
-                    <td>09:00 – 10:00</td>
-                    <td>Registration</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>10:00 – 10:20</td>
-                    <td>Opening</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>10:20 – 11:00</td>
-                    <td>Keynote</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>11:00 – 11:45</td>
-                    <td>Sessions</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>2 speakers (15m each)</td>
-                </tr>
-                <tr>
-                    <td>11:45 – 12:00</td>
-                    <td>Group photo</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>12:30 – 12:45</td>
-                    <td>-</td>
-                    <td>Session</td>
-                    <td rowspan="2">Workshop</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td rowspan="3">Salatul Jummah</td>
-                </tr>
-                <tr>
-                    <td>12:45 – 13:00</td>
-                    <td>Session</td>
-                    <td>Session</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
-                <tr>
-                    <td>13:00 – 14:00</td>
-                    <td colspan="3">Lunch</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
-                <tr>
-                    <td>14:00 – 14:15</td>
-                    <td>Session</td>
-                    <td>Session</td>
-                    <td>Session</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>14:15 – 14:30</td>
-                    <td>-</td>
-                    <td>Session</td>
-                    <td>Session</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>14:30 – 15:00</td>
-                    <td>Panel</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>15:00 – 15:30</td>
-                    <td>-</td>
-                    <td>Session</td>
-                    <td rowspan="3">Lightning Talk</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>15:30 – 16:00</td>
-                    <td>Session</td>
-                    <td>-</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>16:00 – 16:45</td>
-                    <td>-</td>
-                    <td>Session</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>16:45 – 17:15</td>
-                    <td colspan="3">Tea</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>17:15 – 17:30</td>
-                    <td>-</td>
-                    <td>Session</td>
-                    <td>Session</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>17:30 – 18:00</td>
-                    <td>Session</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td></td>
-                </tr>
-            </table>
+
+            <div class="cont">
+
+                <h5>Day 1</h5>
+
+                <table id="day1">
+
+                    <tr>
+                        <th class="time">Time</th>
+                        <th class="hall audi">AudiMain-1000</th>
+                        <th class="hall">TR30</th>
+                        <th class="hall">TR45</th>
+                        <th class="hall">TR60</th>
+                        <th class="hall audi">Audi3D-350</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                09:00
+                                <br>
+                                <small>to</small>
+                                <br>
+                                10:00
+                            </span>
+                        </td>
+                        <td colspan="5">Registration</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                10:00
+                                <br>
+                                <small>to</small>
+                                <br>
+                                10:40
+                            </span>
+                        </td>
+                        <td>
+                            <span class="block type">
+                                Opening Ceremony
+                                <br>
+                                Day 01
+                            </span>
+                            <span class="block speaker s-no-org">State Minister</span>
+                        </td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>x</td>
+                        <td>x</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                10:40
+                                <br>
+                                <small>to</small>
+                                <br>
+                                11:00
+                            </span>
+                        </td>
+                        <td>
+                            <span class="block type">Keynote Speech</span>
+                            <span class="block speaker">Ahasanul Hoque</span>
+                            <span class="block org">OpenStreetMap Bangladesh</span>
+                            <span class="block country c-bd"></span>
+                        </td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                11:00
+                                <br>
+                                <small>to</small>
+                                <br>
+                                11:45
+                            </span>
+                        </td>
+                        <td colspan="5">
+                            <span class="block type">Tea break</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                11:45
+                                <br>
+                                <small>to</small>
+                                <br>
+                                12:00
+                            </span>
+                        </td>
+                        <td colspan="5">
+                            <span class="block type">Group photo</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                12:00
+                                <br>
+                                <small>to</small>
+                                <br>
+                                12:30
+                            </span>
+                        </td>
+                        <td>
+                            <span class="block type">Panel Discussion</span>
+                            <span class="block title">Open Source Technology & Platforms: Volunteer contribution in Bangladesh</span>
+                            <span class="block org">BDosn, Wikimedia Bangladesh, Creative Commons</span>
+                        </td>
+                        <td>-</td>
+                        <td>
+                            <span class="block type">Organizational Session</span>
+                            <span class="block org">UNICEF Bangladesh</span>
+                        </td>
+                        <td>x</td>
+                        <td>x</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                12:30
+                                <br>
+                                <small>to</small>
+                                <br>
+                                12:45
+                            </span>
+                        </td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td rowspan="2">
+                            <span class="block title">How Team Building Activity Energizes Any Map-a-thon in Any Region more</span>
+                            <span class="block speaker">Amir Hamza</span>
+                            <span class="block org">Mekateam / Teach For Bangladesh</span>
+                            <span class="block country c-bd"></span>
+                        </td>
+                        <td>x</td>
+                        <td>x</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                12:45
+                                <br>
+                                <small>to</small>
+                                <br>
+                                13:00
+                            </span>
+                        </td>
+                        <td>
+                            <span class="block title">Map with API</span>
+                            <span class="block org">Facebook</span>
+                        </td>
+                        <td>
+                            <span class="block title">A catalytic approach of a segregated city!</span>
+                            <span class="block speaker">S. Rashmita Patro</span>
+                            <span class="block org">Ramboll India Pvt Ltd</span>
+                            <span class="block country c-in"></span>
+                        </td>
+                        <td>x</td>
+                        <td>x</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                13:00
+                                <br>
+                                <small>to</small>
+                                <br>
+                                14:00
+                            </span>
+                        </td>
+                        <td colspan="5">
+                            <span class="block type">Lunch</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                14:00
+                                <br>
+                                <small>to</small>
+                                <br>
+                                14:15
+                            </span>
+                        </td>
+                        <td>
+                            <span class="block title">Getting lost in address</span>
+                            <span class="block speaker">Bidhan Bhuson Roy</span>
+                            <span class="block org o-boil"></span>
+                            <span class="block country c-bd"></span>
+                        </td>
+                        <td></td>
+                        <td>
+                            <span class="block title">Chitmahals: The India-Bangladesh Enclaves</span>
+                            <span class="block speaker">Sidhant Bansal</span>
+                            <span class="block org">OSM INDIA</span>
+                            <span class="block country c-in"></span>
+                        </td>
+                        <td>x</td>
+                        <td>x</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                14:15
+                                <br>
+                                <small>to</small>
+                                <br>
+                                14:30
+                            </span>
+                        </td>
+                        <td></td>
+                        <td>
+                            <span class="block title">Improving the Health Facilities in Slums: An IUB, UoW & NIHR UK research initiative</span>
+                            <span class="block speaker">Dr. Shifat Ahmed</span>
+                            <span class="block org">Independent University Bangladesh (IUB)</span>
+                            <span class="block country"></span>
+                        </td>
+                        <td>
+                            <span class="block title">Making Public Transport Planning Easy with OSM</span>
+                            <span class="block speaker">Anindya Debnath</span>
+                            <span class="block org">Bangladesh University of Engineering and Technology (BUET)</span>
+                            <span class="block country c-in"></span>
+                        </td>
+                        <td>x</td>
+                        <td>x</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                14:30
+                                <br>
+                                <small>to</small>
+                                <br>
+                                15:00
+                            </span>
+                        </td>
+                        <td>
+                            <span class="block type">Panel Discussion</span>
+                            <span class="block title"></span>
+                            <span class="block speaker">Ataur Rahman Shaheen</span>
+                            <span class="block org">YouthMappers</span>
+                            <span class="block country c-bd"></span>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>x</td>
+                        <td>x</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                15:00
+                                <br>
+                                <small>to</small>
+                                <br>
+                                15:30
+                            </span>
+                        </td>
+                        <td></td>
+                        <td>
+                            <span class="block title">Challenges for women in participatory mapping in Bangladesh and possible solutions</span>
+                            <span class="block speaker">Antara Das Tithi</span>
+                            <span class="block org o-boil"></span>
+                            <span class="block country c-bd"></span>
+                        </td>
+                        <td rowspan="2">
+                            <span class="block type">Lightning Talk</span>
+                            <span class="block speaker">Anirban Roy, Rayhan Hossen, Michael Batame, Aman KC, Atikur Rahman, Nayani Sowmya</span>
+                            <span class="block org"></span>
+                            <span class="block country">India, Bangladesh, Ghana, Nepal, Sri Lanka, Bangladesh, India</span>
+                        </td>
+                        <td>x</td>
+                        <td>x</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                15:30
+                                <br>
+                                <small>to</small>
+                                <br>
+                                16:00
+                            </span>
+                        </td>
+                        <td>
+                            <span class="block title">Post-event Palu Earthquake Field Data Collection</span>
+                            <span class="block speaker">Tri Selasa Pagianti</span>
+                            <span class="block org o-hotid"></span>
+                            <span class="block country c-id"></span>
+                        </td>
+                        <td>
+                            <span class="block title">OSM in Nepal now and then</span>
+                            <span class="block speaker">Roshan Paudel</span>
+                            <span class="block org">Kathmandu Living Lab</span>
+                            <span class="block country c-np"></span>
+                        </td>
+                        <td>x</td>
+                        <td>x</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                16:00
+                                <br>
+                                <small>to</small>
+                                <br>
+                                16:30
+                            </span>
+                        </td>
+                        <td colspan="5">
+                            <span class="block type">Tea break</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                16:30
+                                <br>
+                                <small>to</small>
+                                <br>
+                                17:00
+                            </span>
+                        </td>
+                        <td>
+                            <span class="block type">Organizational Session</span>
+                            <span class="block title"></span>
+                            <span class="block speaker"></span>
+                            <span class="block org"></span>
+                            <span class="block country"></span>
+                        </td>
+                        <td>
+                            <span class="block title">Mozilla Location Service</span>
+                            <span class="block speaker">Subhash Dulla</span>
+                            <span class="block org">Mozilla India</span>
+                            <span class="block country in"></span>
+                        </td>
+                        <td>
+                            <span class="block type">Workshop</span>
+                            <span class="block title">Introduction to OpenStreetmap</span>
+                            <span class="block speaker"></span>
+                            <span class="block org"></span>
+                            <span class="block country"></span>
+                        </td>
+                        <td>x</td>
+                        <td>x</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                17:00
+                                <br>
+                                <small>to</small>
+                                <br>
+                                17:30
+                            </span>
+                        </td>
+                        <td></td>
+                        <td>
+                            <span class="block title">How HOT Microgrants are triggering community resilience</span>
+                            <span class="block speaker">Ataur Rahman Shaheen</span>
+                            <span class="block org">YouthMappers Dhaka College Chapter</span>
+                            <span class="block country bd"></span>
+                        </td>
+                        <td>
+                            <span class="block title">Quality Assurance for Indonesia Road Mapping Project</span>
+                            <span class="block speaker">Yeni Primasari</span>
+                            <span class="block org o-hotid"></span>
+                            <span class="block country id"></span>
+                        </td>
+                        <td>x</td>
+                        <td>x</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                17:30
+                                <br>
+                                <small>to</small>
+                                <br>
+                                18:00
+                            </span>
+                        </td>
+                        <td>
+                            <span class="block title">State of the Country talk</span>
+                            <span class="block speaker">Yogesh K S</span>
+                            <span class="block org">OpenStreetMap India</span>
+                            <span class="block country in"></span>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>x</td>
+                        <td>x</td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+            <div class="cont">
+
+                <h5>Day 2</h5>
+                
+                <table id="day2">
+
+                    <tr>
+                        <th class="time">Time</th>
+                        <th class="hall audi">AudiMain-1000</th>
+                        <th class="hall">TR30</th>
+                        <th class="hall">TR45</th>
+                        <th class="hall">TR60</th>
+                        <th class="hall audi">Audi3D-350</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                10:00
+                                <br>
+                                <small>to</small>
+                                <br>
+                                10:30
+                            </span>
+                        </td>
+                        <td>
+                            <span class="block type">
+                                Opening of Day 02
+                            </span>
+                            <span class="block speaker">Mayor (DSCC)</span>
+                            <span class="block org">Dhaka South City Corporation</span>
+                        </td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="time">
+                                10:30
+                                <br>
+                                <small>to</small>
+                                <br>
+                                11:00
+                            </span>
+                        </td>
+                        <td></td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
         </div>
 
 

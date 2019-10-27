@@ -54,7 +54,7 @@ a.btn:not([href]):not([tabindex]):hover {
 	--logo-color-1a: rgba(38, 34, 98, 1);
 	--logo-color-1b: rgba(85, 83, 130, 1);
 	--logo-color-1c: rgba(134, 132, 165, 1);
-	--logo-color-1d: rgba(134, 132, 165, 0.5);
+	--logo-color-1d: rgba(194, 193, 210, 1);
 	--logo-color-2a: rgba(5, 104, 57, 1);
 	--logo-color-3a: rgba(191, 30, 45, 1);
 	--logo-color-3c: rgba(230, 105, 117, 1);
@@ -575,25 +575,40 @@ div#schedule.row {
 	margin-bottom: 150px;
 }
 #schedule {
+	--time-column-width: 9%;
+	--hall-column-width-general: 24%;		/* multiplied by 3 */
+	--hall-column-width-last: 9%;			/* multiplied by 2 */
 	display: block;
 	text-align: center;
 	min-width: 450px;
 }
+
+#schedule > .cont {
+	margin: 100px 0;
+}
+
 #schedule table {
+	margin: 40px 0;
 	width: 100%;
 	border-spacing: 3px;
 	border-collapse: separate;
 }
 #schedule td {
-	padding: 5px;
-	padding-top: 10px;
-}
-#schedule td {
 	background-color: var(--logo-color-1d);
+	line-height: 1.3rem;
+	padding: 10px 5px;
+	padding-top: 15px;
 }
 #schedule td:hover {
 	cursor: default;
 	background-color: var(--logo-color-3c);
+}
+#schedule td span.time {
+	text-transform: uppercase;
+}
+#schedule td span.time small {
+	font-size: 0.7rem;
+	line-height: 1.75rem;
 }
 #schedule th {
 	font-size: 1.1em;
@@ -601,9 +616,83 @@ div#schedule.row {
 	padding-top: 16px;
 	background-color: var(--logo-color-1b);
 	color: #fff;
+	height: 5rem;
+}
+#schedule th.time {
+	width: var(--time-column-width);
+}
+#schedule th.hall {
+	width: var(--hall-column-width-general);
+}
+#schedule th.hall:nth-child(5),
+#schedule th.hall:nth-child(6) {
+	width: var(--hall-column-width-last);
 }
 #schedule tr:hover > td:nth-of-type(1) {
 	background-color: var(--logo-color-3c);
+}
+
+#schedule span.block {
+	display: block;
+}
+
+#schedule span.type {
+	text-transform: uppercase;
+	margin: 15px 0;
+}
+
+#schedule span.title {
+	margin: 5px 0;
+	font-weight: 700;
+	font-size: 1.05rem;
+}
+
+#schedule span.speaker {
+	margin: 18px 0 15px;
+	background-color: var(--logo-color-1d);
+}
+
+#schedule span.speaker:not(.s-no-org)::after {
+	display: block;
+	margin: 10px auto 0;
+	content:  ' ';
+	width: 10%;
+	height: 0;
+	border-bottom: 1px solid var(--logo-color-1b);
+}
+
+#schedule span.country {
+	margin-top: 7px;
+	font-variant: small-caps;
+}
+
+#schedule span.block.country::after,
+#schedule span.block.org::after {
+	display: block;
+}
+
+#schedule span.org.o-boil::after {
+	content: "Bangladesh Open Innovation Lab (BOIL)";
+}
+
+#schedule span.org.o-hotid::after {
+	content: "HOT Indonesia";
+}
+
+#schedule span.country.c-bd::after {
+	content: "Bangladesh";
+}
+
+#schedule span.country.c-in::after {
+	content: "India";
+}
+
+#schedule span.country.c-id::after {
+	content: "Indonesia";
+}
+
+#schedule span.country.c-np::after {
+	content: "Nepal";
 }
 
 
