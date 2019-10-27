@@ -49,6 +49,9 @@
                     <div id="navbarCollapseToggle" class="collapse navbar-collapse">
                         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                             <li class="navbar-button">
+                                <a class="btn" href="register.html">Register</a>
+                            </li>
+                            <li class="navbar-button">
                                 <a class="btn" href="program.html">Program</a>
                             </li>
                             <li class="navbar-button">
@@ -70,6 +73,13 @@
         </div>
 
 
+        <div id="landingImage" class="row">
+            <a href="https://www.facebook.com/events/468376067103673" target="_blank" title="Go to Facebook event page">
+                <div class="col-12 image"></div>
+            </a>
+        </div>
+
+
         <div id="firstScreen" class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-3 img-cont">
                 <img class="img-fluid logo" src="image/logo/logo.png">
@@ -83,13 +93,19 @@
                 <div>
                     <span class="date">November 1 &ndash; 2, 2019</span>
                     <p>State of the Map Asia will bring together participants from around the world to discuss challenges, learn, and celebrate many years of mapping together.</p>
-                    <a class="btn" href="#" onclick="event.preventDefault(); showComingSoon()">Register</a>
+                    <a class="btn" href="register.html" target="_blank">Register</a>
                     <div id="comingSoon"></div>
                     <div class="affiliation">
-                        <h5>Hosted by:</h5>
-                        <div>
-                            <a href="https://www.osmbdf.org" target="_blank" title="OpenStreetMap Bangladesh Foundation">
+                        <div class="cont">
+                            <h5>Hosted by:</h5>
+                            <a class="cont" href="https://www.osmbdf.org" target="_blank" title="OpenStreetMap Bangladesh Foundation">
                                 <img class="logo" src="image/logo/osmbdf.png">
+                            </a>
+                        </div>
+                        <div class="cont">
+                            <h5>In association with:</h5>
+                            <a class="cont" href="https://www.boiledbhoot.org" target="_blank" title="Bangladesh Open Innovation Lab (BOIL)">
+                                <img class="logo" src="image/logo/boil.png">
                             </a>
                         </div>
                     </div>
@@ -100,54 +116,68 @@
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
-        
 
 
-        <div id="boxes" class="row">
-            <div class="col-12">
-                <div class="box">
-                    <h3>Call for Poster</h3>
-                    <p>Call for posters is open now! Apply if you'd like to show your OSM activities through posters.</p>
-                    <a class="btn" href="https://wiki.openstreetmap.org/wiki/SotM_Asia_2019_Call_for_Poster" target="_blank">Apply now</a>
+        <div id="sponsors" class="row">
+            <div class="cont col-12 col-sm-12 col-md-6 col-lg-8">
+                <h3>Sponsors</h3>
+                <div class="cont">
+                    <div class="box silver">
+                        <span class="text title">Silver</span>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img class="logo" src="image/logo/facebook.png" title="Facebook">
+                        </a>
+                    </div>
+                    <div class="box bronze">
+                        <span class="text title">Bronze</span>
+                        <a href="https://www.mapbox.com" target="_blank">
+                            <img class="logo" src="image/logo/mapbox.png" title="Mapbox">
+                        </a>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="box supporter">
+                        <span class="text title">Supporter</span>
+                        <a href="https://www.youthmappers.org" target="_blank">
+                            <img class="logo" src="image/logo/youthmappers.png" title="YouthMappers">
+                        </a>
+                    </div>
+                    <div class="box supporter">
+                        <span class="text title">Supporter</span>
+                        <a href="https://www.emkcenter.org" target="_blank">
+                            <img class="logo resize-h" src="image/logo/emk-center.png" title="Edward M. Kennedy Center">
+                        </a>
+                    </div>
+                    <div class="box supporter">
+                        <span class="text title">Supporter</span>
+                        <a href="http://www.monicotechnologies.com" target="_blank">
+                            <img class="logo" src="image/logo/kothay.png" title="Monico Technologies Limited">
+                        </a>
+                    </div>
+                    <div class="box supporter">
+                        <span class="text title">Supporter</span>
+                        <a href="http://eutechsystems.com" target="_blank">
+                            <img class="logo resize-w" src="image/logo/eutech.jpg" title="Eutech Systems Ltd.">
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                <a class="box-link" href="https://wiki.openstreetmap.org/wiki/SotM_Asia_2019_Call_for_Proposal" target="_blank" title="Go to Wiki page">
-                    <div class="box closed">
-                        <h3>Call for Proposal</h3>
-                        <p>Registration is closed now.</p>
+            <div class="cont col-12 col-sm-12 col-md-6 col-lg-4">
+                <h3>Partners</h3>
+                <div class="cont">
+                    <div class="box media">
+                        <span class="text title">Media</span>
+                        <a href="https://www.geospatialworld.net" target="_blank">
+                            <img class="logo" src="image/logo/geospatial-world.png" title="Geospatial World">
+                        </a>
                     </div>
-                </a>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                <a class="box-link" href="https://wiki.openstreetmap.org/wiki/SotM_Asia_2019_Call_for_Proposal" target="_blank" title="Go to Wiki page">
-                    <div class="box closed">
-                        <h3>Scholarship</h3>
-                        <p>Registration is closed now.</p>
-                    </div>
-                </a>
+                </div>
             </div>
         </div>
 
 
 
-        <div id="lastYear" class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                <div class="image-fit"></div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-6 info">
-                <h3>State of the Map Asia 2018</h3>
-                <p>Last year, we were in Bangalore, India. Members of the OpenStreetMap community met to learn the significance of mapping from the perspective of the different countries in Asia &ndash; from Afghanistan to Vietnam. 300+ participants from 12 countries, where one in every six participants was a speaker congregated at the Indian Institute of Management Bangalore.</p>
-                <center>
-                    <a class="btn report" target="_blank" href="https://blog.opencagedata.com/post/sotmasia18-roundup" title="SotM Asia 2018 - Bangalore - summary | OpenCage Data Blog">Read about last year</a>
-                    <a class="btn youtube" target="_blank" href="https://www.youtube.com/playlist?list=PLgek-8rdOO3ZsCTlb6XZ0As3u16dUxC1t" title="Watch SotM Asia 2018 talks on YouTube">Watch the talks</a>
-                </center>
-            </div>
-        </div>
-
-
-
-        <div id="sponsor" class="row">
+        <div id="becomeSponsor" class="row">
             <div class="col-sm-12">
                 <h3>Become our sponsor!</h3>
                 <p>As a partner, you will help us shape the conference this year. Download the sponsorship deck and for more information email us at <a href="mailto:stateofthemapasia@gmail.com">stateofthemapasia@gmail.com</a></p>
@@ -167,6 +197,52 @@
                 <p>KIBC Auditorium, the second Largest auditorium in Bangladesh, is owned and managed by Krishibid Institution Bangladesh (KIB). Established with a goal to facilitate professionals from the agricultural sector, this is now a place for knowledge development for all the members of the community.</p>
             </div>
         </div>
+
+
+
+        <div id="lastYear" class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                <div class="image-fit"></div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 info">
+                <h3>State of the Map Asia 2018</h3>
+                <p>Last year, we were in Bangalore, India. Members of the OpenStreetMap community met to learn the significance of mapping from the perspective of the different countries in Asia &ndash; from Afghanistan to Vietnam. 300+ participants from 12 countries, where one in every six participants was a speaker congregated at the Indian Institute of Management Bangalore.</p>
+                <center>
+                    <a class="btn report" target="_blank" href="https://blog.opencagedata.com/post/sotmasia18-roundup" title="SotM Asia 2018 - Bangalore - summary | OpenCage Data Blog">Read about last year</a>
+                    <a class="btn youtube" target="_blank" href="https://www.youtube.com/playlist?list=PLgek-8rdOO3ZsCTlb6XZ0As3u16dUxC1t" title="Watch SotM Asia 2018 talks on YouTube">Watch the talks</a>
+                </center>
+            </div>
+        </div>
+        
+
+
+        <div id="boxes" class="row">
+            <div class="col-12 col-lg-4">
+                <a class="box-link" href="https://wiki.openstreetmap.org/wiki/SotM_Asia_2019_Call_for_Poster" target="_blank" title="Go to Wiki page">
+                    <div class="box closed">
+                        <h3>Call for Poster</h3>
+                        <p>Registration is closed now.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-lg-4">
+                <a class="box-link" href="https://wiki.openstreetmap.org/wiki/SotM_Asia_2019_Call_for_Proposal" target="_blank" title="Go to Wiki page">
+                    <div class="box closed">
+                        <h3>Call for Proposal</h3>
+                        <p>Registration is closed now.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-lg-4">
+                <a class="box-link" href="https://wiki.openstreetmap.org/wiki/SotM_Asia_2019_Call_for_Proposal" target="_blank" title="Go to Wiki page">
+                    <div class="box closed">
+                        <h3>Scholarship</h3>
+                        <p>Registration is closed now.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
 
 
         <div id="footer" class="container">
