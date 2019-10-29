@@ -976,3 +976,61 @@ div#regSuccessMsg {
 #regSuccessMsg span.text.title {
 	font-size: 30px;
 }
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*                           Ticket download page                            */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+div#ticketIDInput {
+	height: calc(100vh - 210px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#ticketIDInput > div.cont {
+	width: 600px;
+	text-align: center;
+}
+
+#ticketIDInput > .cont > .cont {
+	margin: 20px 0;
+}
+
+#ticketIDInput input[type='text'] {
+	margin: 0 20px;
+}
+
+#ticketIDInput label.agree {
+	margin: 20px 0;
+}
+
+#ticketIDInput input[type='checkbox'] {
+	margin-right: 3px;
+}
+
+#ticketIDInput .text.message {
+	padding: 10px 0;
+	display: block;
+	color: initial;
+	border: 1px solid transparent;
+}
+
+#ticketIDInput .message.error {
+	color: darkred;
+	border-color: rgba(251, 122, 147, 1);
+}
+
+#ticketIDInput .message.success {
+	color: green;
+	border-color: lightgreen;
+}
