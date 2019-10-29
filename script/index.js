@@ -74,7 +74,11 @@ function submitFormData() {
             ? priceBeforeDiscount * 0.5
             : coupon[coupon.length-1]==="1"
                 ? priceBeforeDiscount * 0
-                : priceBeforeDiscount;
+                : coupon[coupon.length-1]==="2"
+                    ? priceBeforeDiscount * 0.75
+                    : coupon[coupon.length-1]==="3"
+                        ? priceBeforeDiscount * 0.3
+                        : priceBeforeDiscount;
 
         let data = "first_name="     + firstName
             + "&" + "last_name="     + lastName
