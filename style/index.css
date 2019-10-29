@@ -576,9 +576,10 @@ div#schedule.row {
 	margin-bottom: 150px;
 }
 #schedule {
-	--time-column-width: 9%;
-	--hall-column-width-general: 24%;		/* multiplied by 3 */
-	--hall-column-width-last: 9%;			/* multiplied by 2 */
+	--session-column-width: 7%;
+	--time-column-width: 10%;
+	--hall-column-width: 23%;			/* multiplied by 3 */
+	--remark-column-width: 14%;
 	display: block;
 	text-align: center;
 	min-width: 450px;
@@ -619,18 +620,17 @@ div#schedule.row {
 	color: #fff;
 	height: 5rem;
 }
+#schedule th.session {
+	width: var(--session-column-width);
+}
 #schedule th.time {
 	width: var(--time-column-width);
 }
 #schedule th.hall {
-	width: var(--hall-column-width-general);
+	width: var(--hall-column-width);
 }
-#schedule th.hall:nth-child(5),
-#schedule th.hall:nth-child(6) {
-	width: var(--hall-column-width-last);
-}
-#schedule tr:hover > td:nth-of-type(1) {
-	background-color: var(--logo-color-3c);
+#schedule th.hall:last-child {
+	width: var(--remark-column-width);
 }
 
 #schedule span.block {
@@ -639,6 +639,7 @@ div#schedule.row {
 
 #schedule span.type {
 	text-transform: uppercase;
+	font-weight: 700;
 	margin: 15px 0;
 }
 
@@ -675,8 +676,20 @@ div#schedule.row {
 	content: "Bangladesh Open Innovation Lab (BOIL)";
 }
 
-#schedule span.org.o-hotid::after {
-	content: "HOT Indonesia";
+#schedule span.org.o-hot::after {
+	content: "Humanitarian OpenStreetMap Team (HOT)";
+}
+
+#schedule span.org.o-lil::after {
+	content: "Kathmandu Living Lab";
+}
+
+#schedule span.org.o-osmin::after {
+	content: "OpenStreetMap India";
+}
+
+#schedule span.org.o-ymdc::after {
+	content: "YouthMappers Dhaka College";
 }
 
 #schedule span.country.c-bd::after {
@@ -693,6 +706,10 @@ div#schedule.row {
 
 #schedule span.country.c-np::after {
 	content: "Nepal";
+}
+
+#schedule span.country.c-ph::after {
+	content: "Philippines";
 }
 
 
