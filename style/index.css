@@ -334,7 +334,7 @@ div#landingImage.row {
 
 
 div#firstScreen.row {
-	margin-top: 70px;
+	margin-top: -90px;
 }
 
 @media (max-width: 992px) {
