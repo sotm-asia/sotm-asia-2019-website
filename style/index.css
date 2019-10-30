@@ -572,10 +572,10 @@ div.image-fit {
 
 
 
-div#schedule.row {
+div.schedule.row {
 	margin-bottom: 150px;
 }
-#schedule {
+.schedule {
 	--session-column-width: 7%;
 	--time-column-width: 10%;
 	--hall-column-width: 23%;			/* multiplied by 3 */
@@ -585,34 +585,34 @@ div#schedule.row {
 	min-width: 450px;
 }
 
-#schedule > .cont {
+.schedule > .cont {
 	margin: 100px 0;
 }
 
-#schedule table {
+.schedule table {
 	margin: 40px 0;
 	width: 100%;
 	border-spacing: 3px;
 	border-collapse: separate;
 }
-#schedule td {
+.schedule td {
 	background-color: var(--logo-color-1e);
 	line-height: 1.3rem;
 	padding: 10px 8px;
 	padding-top: 15px;
 }
-#schedule td:hover {
+.schedule td:hover {
 	cursor: default;
 	background-color: var(--logo-color-3c);
 }
-#schedule td span.time {
+.schedule td span.time {
 	text-transform: uppercase;
 }
-#schedule td span.time small {
+.schedule td span.time small {
 	font-size: 0.7rem;
 	line-height: 1.75rem;
 }
-#schedule th {
+.schedule th {
 	font-size: 1.1em;
 	padding: 8px;
 	padding-top: 16px;
@@ -620,31 +620,31 @@ div#schedule.row {
 	color: #fff;
 	height: 5rem;
 }
-#schedule th.time {
+.schedule th.time {
 	width: var(--time-column-width);
 }
 
-#schedule span.block {
+.schedule span.block {
 	display: block;
 }
 
-#schedule span.type {
+.schedule span.type {
 	text-transform: uppercase;
 	font-weight: 700;
 	margin: 15px 0;
 }
 
-#schedule span.title {
+.schedule span.title {
 	margin: 5px 0;
 	font-weight: 700;
 	font-size: 1.05rem;
 }
 
-#schedule span.speaker {
+.schedule span.speaker {
 	margin: 18px 0 15px;
 }
 
-#schedule span.speaker:not(.s-no-org)::after {
+.schedule span.speaker:not(.s-no-org)::after {
 	display: block;
 	margin: 10px auto 0;
 	content:  ' ';
@@ -653,62 +653,62 @@ div#schedule.row {
 	border-bottom: 1px solid var(--logo-color-1b);
 }
 
-#schedule span.country {
+.schedule span.country {
 	margin-top: 7px;
 	font-weight: 700;
 	font-variant: small-caps;
 }
 
-#schedule span.block.country::after,
-#schedule span.block.org::after {
+.schedule span.block.country::after,
+.schedule span.block.org::after {
 	display: block;
 }
 
-#schedule span.org.o-boil::after {
+.schedule span.org.o-boil::after {
 	content: "Bangladesh Open Innovation Lab (BOIL)";
 }
 
-#schedule span.org.o-hot::after {
+.schedule span.org.o-hot::after {
 	content: "Humanitarian OpenStreetMap Team (HOT)";
 }
 
-#schedule span.org.o-lil::after {
+.schedule span.org.o-lil::after {
 	content: "Kathmandu Living Lab";
 }
 
-#schedule span.org.o-osmin::after {
+.schedule span.org.o-osmin::after {
 	content: "OpenStreetMap India";
 }
 
-#schedule span.org.o-uc::after {
+.schedule span.org.o-uc::after {
 	content: "University of Canterbury";
 }
 
-#schedule span.org.o-ymdc::after {
+.schedule span.org.o-ymdc::after {
 	content: "YouthMappers Dhaka College";
 }
 
-#schedule span.country.c-bd::after {
+.schedule span.country.c-bd::after {
 	content: "Bangladesh";
 }
 
-#schedule span.country.c-in::after {
+.schedule span.country.c-in::after {
 	content: "India";
 }
 
-#schedule span.country.c-id::after {
+.schedule span.country.c-id::after {
 	content: "Indonesia";
 }
 
-#schedule span.country.c-jp::after {
+.schedule span.country.c-jp::after {
 	content: "Japan";
 }
 
-#schedule span.country.c-np::after {
+.schedule span.country.c-np::after {
 	content: "Nepal";
 }
 
-#schedule span.country.c-ph::after {
+.schedule span.country.c-ph::after {
 	content: "Philippines";
 }
 
