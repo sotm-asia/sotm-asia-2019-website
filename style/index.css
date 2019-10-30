@@ -608,9 +608,13 @@ div.schedule.row {
 .schedule td span.time {
 	text-transform: uppercase;
 }
-.schedule td span.time small {
+.schedule span.time small.to {
 	font-size: 0.7rem;
 	line-height: 1.75rem;
+}
+.schedule span.time small.to::after {
+	content: 'to';
+	display: block;
 }
 .schedule th {
 	font-size: 1.1em;
