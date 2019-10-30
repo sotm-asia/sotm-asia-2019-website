@@ -22,7 +22,12 @@ getTicketBtn.addEventListener('click', function () {
 
 
 
-//
+// Submit registration form data to Apps Script script.
+//   - Stop default form submission and check entry manually instead.
+//   - Check email validity (minimal).
+//   - Apply discount (if any) before sending data.
+//   - Redirect to SSLCommerz page for success. For full discount, redirect
+//     directly to success page.
 function submitFormData() {
     let url = "https://script.google.com/macros/s/AKfycbxFXi4TlZle0J6H1U3bmBdYlrhNJ0YY47ehPi3pLztWuPi5LQ/exec";
 
@@ -183,6 +188,7 @@ function showInputErrorMessage(fieldName, showErrorMsg) {
 
 
 
+// Create and return an HTML <select> tag using provided data
 function createSelectTag({name, values, texts, defaultText, extras}) {
     if (name && values && values.length>0) {
 
@@ -226,6 +232,7 @@ function createSelectTag({name, values, texts, defaultText, extras}) {
 
 
 
+// Create and return an HTML <option> tag using provided data.
 function addOptionTag({value, text, extras}) {
     let option = document.createElement('option');
 
@@ -273,6 +280,7 @@ function createFormLabel(labelData) {
 
 
 
+// Send ticket ID to Apps Script and get ticket download link.
 function getTicket(ticketID) {
     let url = "https://script.google.com/macros/s/AKfycbytwzymNKARzqYfX_6-dx-KY9-2fgfpXt6zgISKZEgWsVRHNjY/exec";
     let successURL = "https://drive.google.com/uc?export=download&id=";
@@ -284,7 +292,6 @@ function getTicket(ticketID) {
     xHReq.onreadystatechange = function () {
         if (this.readyState==4 && this.status==200) {
             let response = JSON.parse(xHReq.response);
-            console.log(response);
             if (response.status=="success") {;
                 showTicketNotFoundMessage("success");
                 window.open(successURL + response.fileid);
@@ -303,7 +310,8 @@ function getTicket(ticketID) {
 
 
 
-//
+// Show error message if incorrect ticket ID or ticket not found (not generated
+// yet).
 function showTicketNotFoundMessage(msgType) {
 
     let ticketIDCont = document.querySelector('#ticketIDInput');
