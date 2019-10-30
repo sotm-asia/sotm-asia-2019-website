@@ -620,17 +620,8 @@ div#schedule.row {
 	color: #fff;
 	height: 5rem;
 }
-#schedule th.session {
-	width: var(--session-column-width);
-}
 #schedule th.time {
 	width: var(--time-column-width);
-}
-#schedule th.hall {
-	width: var(--hall-column-width);
-}
-#schedule th.hall:last-child {
-	width: var(--remark-column-width);
 }
 
 #schedule span.block {
@@ -664,6 +655,7 @@ div#schedule.row {
 
 #schedule span.country {
 	margin-top: 7px;
+	font-weight: 700;
 	font-variant: small-caps;
 }
 
@@ -688,6 +680,10 @@ div#schedule.row {
 	content: "OpenStreetMap India";
 }
 
+#schedule span.org.o-uc::after {
+	content: "University of Canterbury";
+}
+
 #schedule span.org.o-ymdc::after {
 	content: "YouthMappers Dhaka College";
 }
@@ -702,6 +698,10 @@ div#schedule.row {
 
 #schedule span.country.c-id::after {
 	content: "Indonesia";
+}
+
+#schedule span.country.c-jp::after {
+	content: "Japan";
 }
 
 #schedule span.country.c-np::after {
