@@ -4,6 +4,24 @@
 
 
 
+let getTicketBtn = document.querySelector('#ticketIDInput button.submit');
+
+getTicketBtn.addEventListener('click', function () {
+    
+    let ticketID = document.getElementsByName('ticket_id')[0].value;
+    let agree = document.getElementsByName('agree')[0].checked;
+
+    if (ticketID && agree) {
+        showTicketNotFoundMessage("none");
+        getTicket(ticketID);
+    }
+
+})
+
+
+
+
+
 //
 function submitFormData() {
     let url = "https://script.google.com/macros/s/AKfycbxFXi4TlZle0J6H1U3bmBdYlrhNJ0YY47ehPi3pLztWuPi5LQ/exec";
@@ -249,4 +267,61 @@ function createFormLabel(labelData) {
         }
     }
     return label;
+}
+
+
+
+
+
+function getTicket(ticketID) {
+    let url = "https://script.google.com/macros/s/AKfycbytwzymNKARzqYfX_6-dx-KY9-2fgfpXt6zgISKZEgWsVRHNjY/exec";
+    let successURL = "https://drive.google.com/uc?export=download&id=";
+
+    let data = "ticket_number=" + ticketID;
+    
+    let xHReq = new XMLHttpRequest();
+
+    xHReq.onreadystatechange = function () {
+        if (this.readyState==4 && this.status==200) {
+            let response = JSON.parse(xHReq.response);
+            console.log(response);
+            if (response.status=="success") {;
+                showTicketNotFoundMessage("success");
+                window.open(successURL + response.fileid);
+            } else if (response.status=="failed") {
+                showTicketNotFoundMessage("error");
+            }
+        }
+    }
+
+    xHReq.open("GET", (url + "?" + data), true);
+    xHReq.send();
+
+}
+
+
+
+
+
+//
+function showTicketNotFoundMessage(msgType) {
+
+    let ticketIDCont = document.querySelector('#ticketIDInput');
+    let getTicketBtn = ticketIDCont.querySelector('button.submit');
+    let ticketErrMsg = ticketIDCont.querySelector('span.text.message');
+
+    if (msgType=="error") {
+        ticketErrMsg.innerText = "Ticket not found!";
+        ticketErrMsg.classList.remove("hidden", "success");
+        ticketErrMsg.classList.add("error");
+    } else if (msgType=="success") {
+        ticketErrMsg.innerText = "Your ticket is ready for download!";
+        ticketErrMsg.classList.remove("hidden", "error");
+        ticketErrMsg.classList.add("success");
+    } else if (msgType=="none") {
+        ticketErrMsg.innerText = "";
+        ticketErrMsg.classList.remove("error", "success");
+        ticketErrMsg.classList.add("hidden");
+    }
+
 }
