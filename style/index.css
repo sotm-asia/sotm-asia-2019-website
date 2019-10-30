@@ -668,6 +668,10 @@ div.schedule.row {
 	display: block;
 }
 
+.schedule span.org.o-bbs::after {
+    content: "Bangladesh Bureau of Statistics";
+}
+
 .schedule span.org.o-boil::after {
 	content: "Bangladesh Open Innovation Lab (BOIL)";
 }
