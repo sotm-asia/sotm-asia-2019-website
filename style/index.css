@@ -375,6 +375,13 @@ div#firstScreen.row {
 		font-size: 1.2rem;
 	}
 }
+#firstScreen a.btn.closed {
+	background-color: var(--logo-color-3c);
+}
+#firstScreen a.btn.closed:hover {
+	cursor: default;
+	border-color: var(--logo-color-3a);
+}
 #firstScreen .affiliation {
 	margin: 40px 0px 0px 0px;
 }
